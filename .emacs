@@ -19,6 +19,8 @@
     "ac-math"
     "ac-ispell"
     "ac-etags"
+
+    "java-snippets"
     
     ;; Common Lisp
     "slime"
