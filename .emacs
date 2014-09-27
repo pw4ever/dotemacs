@@ -7,13 +7,17 @@
 (defvar *package-names*
   '(
     ;; general
-    "color-theme"
+    
+    "ample-theme"
+    ;;"color-theme"    
     "helm"
     "company"
     "smartparens"
     "rainbow-delimiters"
     "auto-complete"
     "yasnippet"
+
+    "async"
 
     "ac-helm"
     "ac-math"
@@ -51,3 +55,4 @@
       (package-install package))
     (when (file-exists-p package-config-path)
       (load-file package-config-path))))
+(put 'erase-buffer 'disabled nil)
