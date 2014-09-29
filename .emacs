@@ -47,6 +47,7 @@
 
     "ess"
     "org"
+    "org-plus-contrib"
     ))
 
 (load-file "~/.emacs.d/config/pre-package-load.el")
