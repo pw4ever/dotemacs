@@ -14,21 +14,24 @@
     "company"
     "smartparens"
     "rainbow-delimiters"
+    "async"    
+    
+    ;; auto complete
     "auto-complete"
-    "yasnippet"
-
-    "async"
-
     "ac-helm"
     "ac-math"
     "ac-ispell"
     "ac-etags"
 
+    ;; snippets
+    "yasnippet"
     "java-snippets"
+    "clojure-snippets"
+    "datomic-snippets"
     
     ;; Common Lisp
-    "slime"
-    "ac-slime"
+    ;;"slime"
+    ;;"ac-slime"
 
     ;; Clojure
     "cider"
@@ -37,9 +40,8 @@
     "clj-refactor"
     "slamhound"
     "ac-cider"
-    "clojure-snippets"
-    "datomic-snippets"
     
+    ;; misc
     "auctex"
     "zencoding-mode"
 
