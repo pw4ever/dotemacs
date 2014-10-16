@@ -40,6 +40,9 @@
     "clj-refactor"
     "slamhound"
     "ac-cider"
+
+    ;; Haskell
+    "haskell-mode"
     
     ;; misc
     "auctex"
