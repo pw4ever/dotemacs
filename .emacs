@@ -14,7 +14,8 @@
     "company"
     "smartparens"
     "rainbow-delimiters"
-    "async"    
+    "async"
+    "pretty-mode"
     
     ;; auto complete
     "auto-complete"
