@@ -10,7 +10,6 @@
     "zenburn-theme"
 
     ;; general packages
-    "helm"
     "company"
     "smartparens"
     "rainbow-delimiters"
@@ -24,11 +23,19 @@
     "ac-ispell"
     "ac-etags"
 
+    ;; helm
+    "helm"
+    "helm-flycheck"
+
     ;; snippets
     "yasnippet"
     "java-snippets"
     "clojure-snippets"
     "datomic-snippets"
+
+    ;; flycheck
+    "flycheck"
+    "flycheck-color-mode-line"
     
     ;; Common Lisp
     ;;"slime"
@@ -44,6 +51,10 @@
 
     ;; Haskell
     "haskell-mode"
+    "ac-haskell-process"
+    "flycheck-haskell"
+    "hi2"
+    "shm"
     
     ;; misc
     "auctex"
