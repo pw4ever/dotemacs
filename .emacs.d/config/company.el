@@ -1,6 +1,8 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
-(global-set-key (kbd "C-i") 'company-complete)
+;; http://www.emacswiki.org/CompanyMode#toc5
+(setq company-idle-delay t)
+;;(global-set-key (kbd "C-M-i") 'company-complete)
 
 ;; (defun indent-or-complete ()
 ;;   (interactive)
