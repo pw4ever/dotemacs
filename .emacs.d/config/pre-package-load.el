@@ -16,8 +16,16 @@
 (column-number-mode)
 (size-indication-mode)
 
+;; speedbar ;; replaced by sr-speedbar
+;; (when (window-system)
+;;   (speedbar t)
+;;   (add-hook 'speedbar-mode-hook
+;; 	    '(lambda ()
+;; 	       (interactive)
+;; 	       (other-frame 0))))
+
 ;; (add-hook 'after-change-major-mode-hook 'hl-line-mode) ; hl-line-mode is a buffer-local minor mode
 
-(global-set-key '[f9] 'shell)
+;;(global-set-key '[f9] 'shell)
 (global-set-key '[f11] 'flyspell-mode)
 (global-set-key '[f12] 'compile)

@@ -15,6 +15,8 @@
     "rainbow-delimiters"
     "async"
     "pretty-mode"
+    "sr-speedbar"
+    "w3m"
     
     ;; auto complete
     "auto-complete"
