@@ -1,10 +1,14 @@
 (require 'cider)
 
-(setenv "PATH" (concat (getenv "PATH") ":/opt/java/bin"))
-(setq exec-path (append exec-path '("/opt/java/bin")))
+;; (setenv "PATH" (concat (getenv "PATH") ":/opt/java/bin"))
+;; (setq exec-path (append exec-path '("/opt/java/bin")))
 
-(custom-set-variables
- '(cider-server-command "~/tools/bin/lein repl :headless"))
+;; "lein" should be put in "~/bin/"
+(setenv "PATH" (concat (getenv "PATH") ":~/bin/"))
+(setq exec-path (append exec-path '("~/bin/")))
+
+;; (custom-set-variables
+;;  '(cider-server-command "~/tools/bin/lein repl :headless"))
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
