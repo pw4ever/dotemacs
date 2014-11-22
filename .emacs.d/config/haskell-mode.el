@@ -28,15 +28,15 @@
      (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
      (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
      
-     ;; https://github.com/haskell/haskell-mode/wiki/Browsing-Haddocks
-     (require 'w3m-haddock)
-     (define-key w3m-mode-map (kbd "C-c C-d") 'haskell-w3m-open-haddock)
-     (define-key w3m-mode-map (kbd "M-.") 'w3m-haddock-find-tag)
-     (add-hook 'w3m-display-hook 'w3m-haddock-display)
+     ;; ;; https://github.com/haskell/haskell-mode/wiki/Browsing-Haddocks
+     ;; (require 'w3m-haddock)
+     ;; (define-key w3m-mode-map (kbd "C-c C-d") 'haskell-w3m-open-haddock)
+     ;; (define-key w3m-mode-map (kbd "M-.") 'w3m-haddock-find-tag)
+     ;; (add-hook 'w3m-display-hook 'w3m-haddock-display)
 
      ;; (defcustom haskell-w3m-haddock-dirs
      ;;   '("~/.cabal/share/doc/"))
-     (define-key haskell-mode-map (kbd "C-c C-d") 'haskell-w3m-open-haddock)
+     ;; (define-key haskell-mode-map (kbd "C-c C-d") 'haskell-w3m-open-haddock)
 
      ))
 
