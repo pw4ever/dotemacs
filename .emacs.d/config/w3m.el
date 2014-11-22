@@ -1,5 +1,11 @@
 (require 'w3m)
 
+;; http://www.emacswiki.org/emacs/emacs-w3m
+(setq browse-url-browser-function 'w3m-browse-url)
+(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+;; optional keyboard short-cut
+(global-set-key "\C-xm" 'browse-url-at-point)
+
 ;; https://github.com/haskell/haskell-mode/wiki/Browsing-Haddocks
 (setq w3m-mode-map (make-sparse-keymap))
 

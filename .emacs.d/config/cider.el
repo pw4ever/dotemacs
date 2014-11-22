@@ -3,7 +3,6 @@
 ;; (setenv "PATH" (concat (getenv "PATH") ":/opt/java/bin"))
 ;; (setq exec-path (append exec-path '("/opt/java/bin")))
 
-;; "lein" should be put in "~/bin/"
 (setenv "PATH" (concat (getenv "PATH") ":~/bin/"))
 (setq exec-path (append exec-path '("~/bin/")))
 
@@ -49,8 +48,6 @@
 	      (yas-activate-extra-mode 'clojure-mode)))
   (dolist (mode '(subword-mode))
     (add-hook hook mode)))
-
-
 
 ;; ;; integration with other modes
 ;; (add-hook 'cider-repl-mode-hook 'subword-mode) ;; for editing CamelCase
