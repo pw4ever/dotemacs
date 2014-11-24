@@ -1,3 +1,9 @@
+;;; cider --- configure cider
+
+;;; Commentary:
+;; https://github.com/clojure-emacs/cider/blob/master/README.md#configuration
+
+;;; Code:
 (require 'cider)
 
 ;; (setenv "PATH" (concat (getenv "PATH") ":/opt/java/bin"))
@@ -11,20 +17,25 @@
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
-(setq nrepl-hide-special-buffers t)
+(setq nrepl-log-messages t) ; for debugging CIDER
+
+(setq nrepl-hide-special-buffers nil)
 
 (setq cider-repl-tab-command 'cider-repl-indent-and-complete-symbol)
-;(setq cider-repl-tab-command 'indent-for-tab-command)
+;;(setq cider-repl-tab-command 'indent-for-tab-command)
+(setq cider-prefer-local-resources t)
 
-;(setq cider-repl-pop-to-buffer-on-connect nil)
-(setq cider-popup-stacktraces nil)
-(setq cider-repl-popup-stacktraces t)
+(setq cider-repl-pop-to-buffer-on-connect t)
+(setq cider-show-error-buffer t)
 (setq cider-auto-select-error-buffer t)
+
+;; valid filter types: java, clj, repl, tooling, dup
+(setq cider-stacktrace-default-filters '(tooling dup))
+
 (setq nrepl-buffer-name-separator "-")
 (setq nrepl-buffer-name-show-port t)
 (setq cider-repl-display-in-current-window t)
-;(setq cider-repl-print-length 100) ; the default is nil, no limit
-;(setq cider-prompt-save-file-on-load nil)
+(setq cider-prompt-save-file-on-load nil)
 (setq cider-repl-result-prefix ";; => ")
 (setq cider-interactive-eval-result-prefix ";; => ")
 (setq cider-repl-use-clojure-font-lock t)
