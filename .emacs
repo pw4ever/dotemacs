@@ -14,7 +14,7 @@
     "smartparens"
     "rainbow-delimiters"
     "async"
-    "pretty-mode"
+    ;;"pretty-mode"
     "sr-speedbar"
     ;;"w3m"
     
