@@ -57,7 +57,7 @@
   (add-hook hook
 	    (lambda ()
 	      (yas-activate-extra-mode 'clojure-mode)))
-  (dolist (mode '(subword-mode))
+  (dolist (mode '(subword-mode hs-minor-mode))
     (add-hook hook mode)))
 
 ;; ;; integration with other modes
