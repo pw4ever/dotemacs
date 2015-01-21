@@ -57,6 +57,9 @@
     "flycheck-haskell"
     "hi2"
     "shm"
+
+    ;; Ruby
+    "rinari"
     
     ;; misc
     "auctex"
