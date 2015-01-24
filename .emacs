@@ -60,6 +60,7 @@
 
     ;; Ruby
     "rinari"
+    "rvm"
     
     ;; misc
     "auctex"
