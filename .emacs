@@ -17,6 +17,7 @@
     ;;"pretty-mode"
     "sr-speedbar"
     ;;"w3m"
+    "ggtags"
     
     ;; auto complete
     "auto-complete"
@@ -28,6 +29,8 @@
     ;; helm
     "helm"
     "helm-flycheck"
+    "helm-google"
+    "helm-gtags"
 
     ;; snippets
     "yasnippet"
