@@ -1,28 +1,28 @@
 (require 'smartparens-config)
 
-;; (dolist (hook '(cider-mode-hook
-;; 		cider-repl-mode-hook
-;; 		clojure-mode-hook
-
-;; 		emacs-lisp-mode-hook
-
-;; 		lisp-mode-hook
-;; 		lisp-interaction-mode-hook
-;; 		slime-repl-mode-hook
-
-;; 		scheme-mode-hook
+(dolist (hook '(lisp-hook-mode
+		emacs-lisp-mode-hook
 		
-;; 		ess-mode-hook
-;; 		ess-R-post-run-hook))
-;;   (add-hook hook (lambda () (smartparens-strict-mode +1))))
+		cider-mode-hook
+		cider-repl-mode-hook
+		clojure-mode-hook
+                
+		lisp-interaction-mode-hook
+		slime-repl-mode-hook
+
+		scheme-mode-hook
+
+		ess-mode-hook
+		ess-R-post-run-hook))
+  (add-hook hook (lambda () (smartparens-strict-mode +1))))
 
 ;; https://github.com/Fuco1/smartparens/wiki/Example-configuration
 
 ;(smartparens-global-mode t)
-(smartparens-global-strict-mode t)
+;;(smartparens-global-strict-mode t)
 
 ;; highlights matching pairs
-(show-smartparens-global-mode t)
+;;(show-smartparens-global-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; keybinding management
