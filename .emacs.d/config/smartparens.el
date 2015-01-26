@@ -13,7 +13,10 @@
 		scheme-mode-hook
 
 		ess-mode-hook
-		ess-R-post-run-hook))
+		ess-R-post-run-hook
+
+		latex-mode-hook
+		LaTeX-mode-hook))
   (add-hook hook (lambda () (smartparens-strict-mode +1))))
 
 ;; https://github.com/Fuco1/smartparens/wiki/Example-configuration
