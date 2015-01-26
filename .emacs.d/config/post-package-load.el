@@ -14,7 +14,10 @@
   (let ((comint-buffer-maximum-size 0))
     (comint-truncate-buffer)))
 
+;; in case other mode shadow one of the bindings
 (define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
+(define-key comint-mode-map "\C-co" #'comint-clear-buffer)
+(define-key comint-mode-map "\C-cO" #'comint-clear-buffer)
 
 ;;; finding tag files
 
