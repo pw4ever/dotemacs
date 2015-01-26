@@ -10,7 +10,7 @@
     "zenburn-theme"
 
     ;; general packages
-    "company"
+    
     "smartparens"
     "rainbow-delimiters"
     "async"
@@ -18,6 +18,9 @@
     "sr-speedbar"
     ;;"w3m"
     "ggtags"
+    "unify-opening"
+    "use-package"
+    "runner"
     
     ;; auto complete
     "auto-complete"
@@ -25,6 +28,16 @@
     "ac-math"
     "ac-ispell"
     "ac-etags"
+    "ac-html"
+
+    ;; company
+    "company"
+    "company-auctex"
+    "company-c-headers"
+    "company-ess"
+    "company-ghc"
+    "company-go"
+    "company-math"
 
     ;; helm
     "helm"
@@ -49,6 +62,7 @@
     ;; Clojure
     "cider"
     "clojure-mode"
+    "clojure-mode-extra-font-locking"
     "clojure-cheatsheet"
     "clj-refactor"
     "slamhound"
@@ -56,19 +70,28 @@
 
     ;; Haskell
     "haskell-mode"
+    "company-cabal"    
     "ac-haskell-process"
     "flycheck-haskell"
     "hi2"
     "shm"
 
     ;; Ruby
+    "ruby-mode"
     "rinari"
+    "rspec-mode"
     "rvm"
+    "ac-inf-ruby"
+    "company-inf-ruby"
+    "ruby-additional"
+    "ruby-electric"
+    "ruby-hash-syntax"
+    "ruby-guard"
+    "ruby-tools"
     
     ;; misc
     "auctex"
     "zencoding-mode"
-
     "ess"
     "org"
     "org-plus-contrib"
