@@ -21,6 +21,7 @@
     "unify-opening"
     "use-package"
     "runner"
+    "hideshow-org"
     
     ;; auto complete
     "auto-complete"
@@ -44,7 +45,11 @@
     "helm-flycheck"
     "helm-google"
     "helm-gtags"
-
+    "helm-themes"
+    "helm-helm-commands"
+    "helm-make"
+    "helm-package"
+    
     ;; snippets
     "yasnippet"
     "java-snippets"
@@ -88,6 +93,9 @@
     "ruby-hash-syntax"
     "ruby-guard"
     "ruby-tools"
+    "helm-rubygems-org"
+    "helm-rb"
+    "helm-rails"
     
     ;; misc
     "auctex"
