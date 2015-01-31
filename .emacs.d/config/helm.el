@@ -63,5 +63,6 @@
   ;;; Save current position to mark ring
 (add-hook 'helm-goto-line-before-hook 'helm-save-current-pos-to-mark-ring)
 
-(helm-mode 1)
+(helm-autoresize-mode +1)
+(helm-mode +1)
 
