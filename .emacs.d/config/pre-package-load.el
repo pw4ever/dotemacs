@@ -2,12 +2,14 @@
 (setq make-backup-files nil)
 (setq highlight-nonselected-windows t)
 (setq browse-url-browser-function 'browse-url-generic
-          browse-url-generic-program "firefox")
+      browse-url-generic-program "firefox")
 (setq bookmark-save-flag 1) ; save bookmarks after every modifications
 
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)
 (require 'saveplace)
+
+(setq load-prefer-newer t)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 
