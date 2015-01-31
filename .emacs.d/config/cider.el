@@ -56,7 +56,11 @@
 		clojure-mode-hook))
   (add-hook hook
 	    (lambda ()
-	      (yas-activate-extra-mode 'clojure-mode)))
+	      ;; turn off ggtags mode to prevent collision
+	      (when (boundp 'ggtags-mode)
+		(ggtags-mode -1))
+	      (when (boundp 'yas-activate-extra-mode)
+		(yas-activate-extra-mode 'clojure-mode))))
   (dolist (mode '(subword-mode hs-minor-mode))
     (add-hook hook mode)))
 
