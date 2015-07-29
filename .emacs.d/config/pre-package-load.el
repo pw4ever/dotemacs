@@ -12,6 +12,7 @@
 (setq load-prefer-newer t)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-map 'hs-minor-mode)
 
 (global-linum-mode)
 (line-number-mode)
