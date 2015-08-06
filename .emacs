@@ -96,11 +96,16 @@
     ;"helm-rubygems-org"
     ;"helm-rb"
     ;"helm-rails"
+
+    ;; ESS/R
+    "ess"
+    "ess-R-data-view"
+    "ess-R-object-popup"
+    "ess-smart-equals"
     
     ;; misc
     "auctex"
     "zencoding-mode"
-    "ess"
     "org"
     "org-plus-contrib"
     ))
