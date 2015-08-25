@@ -5,11 +5,13 @@
       browse-url-generic-program "firefox")
 (setq bookmark-save-flag 1) ; save bookmarks after every modifications
 
+(require 'saveplace)
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)
-(require 'saveplace)
 
 (setq load-prefer-newer t)
+
+(setq global-mark-ring-max 128)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'hs-minor-mode)
