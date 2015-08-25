@@ -19,6 +19,8 @@
 (column-number-mode)
 (size-indication-mode)
 
+(tool-bar-mode -1)
+
 ;; speedbar ;; replaced by sr-speedbar
 ;; (when (window-system)
 ;;   (speedbar t)
