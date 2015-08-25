@@ -73,6 +73,9 @@
     "ac-cider"
     "4clojure"
 
+    ;; Java
+    "jdee"
+
     ;; Haskell
     ;"haskell-mode"
     ;"company-cabal"    
