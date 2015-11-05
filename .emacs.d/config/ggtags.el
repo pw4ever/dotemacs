@@ -20,4 +20,7 @@
      (define-key ggtags-mode-map (kbd "M-/") 'ggtags-find-file)
      ))
 
-(global-ggtags-mode)
+;; do not enable global-ggtags-model:
+;; * To speed up start-up,
+;; * To prevent hang in case parent path not accessible, e.g., Windows share.
+;(global-ggtags-mode)
