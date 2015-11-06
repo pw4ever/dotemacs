@@ -73,6 +73,9 @@
     "ac-cider"
     "4clojure"
 
+	;; Go
+	"go-mode"
+
     ;; Java
     "jdee"
 
