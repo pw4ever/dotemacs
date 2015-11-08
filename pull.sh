@@ -9,3 +9,4 @@ cp -v ~/.emacs ${DIR}/.emacs
 TARGET=${DIR}/.emacs.d/config/
 mkdir -p ${TARGET}
 cp -vr ~/.emacs.d/config/*.el ${TARGET}
+cp -vr ~/.emacs.d/config/00deps ${TARGET}
