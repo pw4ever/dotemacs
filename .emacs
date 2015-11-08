@@ -22,8 +22,8 @@
     "use-package"
     "runner"
     "hideshow-org"
-	"direx"
 	"popwin"
+	"direx"
     
     ;; auto complete
     "auto-complete"
@@ -61,6 +61,13 @@
     ;; flycheck
     "flycheck"
     "flycheck-color-mode-line"
+
+	;; flymake
+	"flymake"
+	"flymake-go"
+	;;"flymake-google-cpplint"
+	;;"flymake-lua"
+	"flymake-shell"
     
     ;; Common Lisp
     ;;"slime"
@@ -84,6 +91,7 @@
 	"go-eldoc"	
 	"go-errcheck"
 	"go-playground"
+	"go-scratch"
 	"go-stacktracer"
 	"gotest"
 	
