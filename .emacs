@@ -22,6 +22,8 @@
     "use-package"
     "runner"
     "hideshow-org"
+	"direx"
+	"popwin"
     
     ;; auto complete
     "auto-complete"
@@ -54,6 +56,7 @@
     "java-snippets"
     "clojure-snippets"
     "datomic-snippets"
+	"go-snippets"
 
     ;; flycheck
     "flycheck"
@@ -75,7 +78,15 @@
 
 	;; Go
 	"go-mode"
-
+	"go-autocomplete"
+	"go-complete"
+	"go-direx"
+	"go-eldoc"	
+	"go-errcheck"
+	"go-playground"
+	"go-stacktracer"
+	"gotest"
+	
     ;; Java
     "jdee"
 
@@ -111,6 +122,7 @@
     
     ;; misc
     "auctex"
+	"gist"
     "zencoding-mode"
     "org"
     "org-plus-contrib"
