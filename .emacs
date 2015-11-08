@@ -61,6 +61,7 @@
     ;; flycheck
     "flycheck"
     "flycheck-color-mode-line"
+	"flycheck-clojure"
 
 	;; flymake
 	"flymake"
