@@ -39,6 +39,7 @@
 
 ;; add ~/.emacs.d/config/00deps/ to load-path so can require'd the dependencies
 (let ((dep-dirname (expand-file-name "00deps"
-								  (concat (getenv "HOME") "/.emacs.d/config/"))))
+									 (concat (getenv "HOME")
+											 "/.emacs.d/config/"))))
   (when (file-exists-p dep-dirname)
 	(add-to-list 'load-path dep-dirname)))
