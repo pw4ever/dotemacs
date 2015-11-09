@@ -63,12 +63,7 @@
     "flycheck-color-mode-line"
 	"flycheck-clojure"
 
-	;; flymake
-	"flymake"
-	"flymake-go"
-	;;"flymake-google-cpplint"
-	;;"flymake-lua"
-	"flymake-shell"
+	;; !!! DO NOT USE the built-in flymake; use flycheck as above
     
     ;; Common Lisp
     ;;"slime"
@@ -139,13 +134,16 @@
 
 (load-file "~/.emacs.d/config/pre-package-load.el")
 
-(dolist (package-name *package-names*)
-  (let ((package (intern package-name))
-	(package-config-path (format "~/.emacs.d/config/%s.el" package-name)))
-    (unless (package-installed-p package)
-      (package-refresh-contents)
-      (package-install package))
-    (when (file-exists-p package-config-path)
-      (load-file package-config-path))))
+(let ((refreshed-p nil))
+  (dolist (package-name *package-names*)
+	(let ((package (intern package-name))
+		  (package-config-path (format "~/.emacs.d/config/%s.el" package-name)))
+	  (unless (package-installed-p package)
+		(unless refreshed-p
+		  (package-refresh-contents)
+		  (setq refreshed-p t))
+		(package-install package))
+	  (when (file-exists-p package-config-path)
+		(load-file package-config-path)))))
 
 (load-file "~/.emacs.d/config/post-package-load.el")

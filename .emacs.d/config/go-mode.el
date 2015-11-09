@@ -18,6 +18,11 @@
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "M-.") #'godef-jump)))
 
+;; https://github.com/dougm/goflymake
+;; deps: go get -u github.com/dougm/goflymake
+;; go-flycheck.el is under ~/.emacs.d/config/00deps/ added in pre-package-load.el
+(require 'go-flycheck)
+
 (define-key go-mode-map (kbd "C-c d") 'godef-describe)
 (define-key go-mode-map (kbd "C-c C-d") 'godoc)
 
