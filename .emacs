@@ -10,8 +10,7 @@
     "zenburn-theme"
 
     ;; general packages
-    
-    "smartparens"
+	"smartparens"
     "rainbow-delimiters"
     "async"
     ;;"pretty-mode"
@@ -95,28 +94,28 @@
     "jdee"
 
     ;; Haskell
-    ;"haskell-mode"
-    ;"company-cabal"    
-    ;"ac-haskell-process"
-    ;"flycheck-haskell"
-    ;"hi2"
-    ;"shm"
+    ;;"haskell-mode"
+    ;;"company-cabal"    
+    ;;"ac-haskell-process"
+    ;;"flycheck-haskell"
+    ;;"hi2"
+    ;;"shm"
 
     ;; Ruby
-    ;"ruby-mode"
-    ;"rinari"
-    ;"rspec-mode"
-    ;"rvm"
-    ;"ac-inf-ruby"
-    ;"company-inf-ruby"
-    ;"ruby-additional"
-    ;"ruby-electric"
-    ;"ruby-hash-syntax"
-    ;"ruby-guard"
-    ;"ruby-tools"
-    ;"helm-rubygems-org"
-    ;"helm-rb"
-    ;"helm-rails"
+    ;;"ruby-mode"
+    ;;"rinari"
+    ;;"rspec-mode"
+    ;;"rvm"
+    ;;"ac-inf-ruby"
+    ;;"company-inf-ruby"
+    ;;"ruby-additional"
+    ;;"ruby-electric"
+    ;;"ruby-hash-syntax"
+    ;;"ruby-guard"
+    ;;"ruby-tools"
+    ;;"helm-rubygems-org"
+    ;;"helm-rb"
+    ;;"helm-rails"
 
     ;; ESS/R
     "ess"

@@ -6,6 +6,8 @@
 		cider-mode-hook
 		cider-repl-mode-hook
 		clojure-mode-hook
+
+		go-mode-hook
                 
 		lisp-interaction-mode-hook
 		slime-repl-mode-hook
