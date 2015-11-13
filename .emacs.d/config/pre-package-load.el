@@ -20,6 +20,8 @@
 (line-number-mode)
 (column-number-mode)
 (size-indication-mode)
+;;(desktop-save-mode)
+(savehist-mode)
 
 (tool-bar-mode -1)
 
