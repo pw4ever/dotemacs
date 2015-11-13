@@ -23,6 +23,7 @@
     "hideshow-org"
 	"popwin"
 	"direx"
+	"point-undo"
     
     ;; auto complete
     "auto-complete"
