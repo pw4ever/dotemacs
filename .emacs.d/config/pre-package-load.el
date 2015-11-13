@@ -1,5 +1,6 @@
 (setq inhibit-startup-screen t)
 (setq make-backup-files nil)
+(setq load-prefer-newer t)
 (setq highlight-nonselected-windows t)
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "firefox")
@@ -9,9 +10,10 @@
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)
 
-(setq load-prefer-newer t)
-
-(setq global-mark-ring-max 128)
+;; mark ring settings
+(setq global-mark-ring-max (expt 2 20))
+(setq mark-ring-max (expt 2 16))
+(setq set-mark-command-repeat-pop t)
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'hs-minor-mode)
