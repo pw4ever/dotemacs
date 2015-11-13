@@ -131,7 +131,12 @@
     "org-plus-contrib"
     ))
 
-(load-file "~/.emacs.d/config/pre-package-load.el")
+(defun load-file-if-exists (file)
+  "Load FILE when (file-exists-p FILE); otherwise no-op."
+  (when (file-exists-p file)
+	(load-file file)))
+
+(load-file-if-exists "~/.emacs.d/config/pre-package-load.el")
 
 (let ((refreshed-p nil))
   (dolist (package-name *package-names*)
@@ -142,7 +147,8 @@
 		  (package-refresh-contents)
 		  (setq refreshed-p t))
 		(package-install package))
-	  (when (file-exists-p package-config-path)
-		(load-file package-config-path)))))
+	  (load-file-if-exists package-config-path))))
 
-(load-file "~/.emacs.d/config/post-package-load.el")
+(load-file-if-exists "~/.emacs.d/config/post-package-load.el")
+
+(load-file-if-exists "~/.emacs.local")
