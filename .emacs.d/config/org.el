@@ -1,9 +1,16 @@
-;(add-to-list 'load-path "~/.emacs.d/org/lisp")
+;; http://orgmode.org/
 (require 'org-install)
+
+;; file association
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+
+;; config
+(setq org-log-done t)
+(setq org-catch-invisible-edits 'smart)
+
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+
 
 ;; org-directory defaults to "$HOME/org/" if:
 ;; * org-directory has not been set, i.e., is "nil",
@@ -18,5 +25,4 @@
 (if (or (not (boundp 'org-mobile-directory))
 	   (not org-mobile-directory)
 	   (not (file-accessible-directory-p org-mobile-directory)))
-  (setq org-mobile-directory org-directory))
-
+	(setq org-mobile-directory org-directory))
