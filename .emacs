@@ -50,7 +50,11 @@
     "helm-helm-commands"
     "helm-make"
     "helm-package"
-    
+
+	;; Org Mode
+	"org"
+    "org-plus-contrib"
+	
     ;; snippets
     "yasnippet"
     "java-snippets"
@@ -128,9 +132,7 @@
     "auctex"
 	"gist"
     "zencoding-mode"
-    "org"
-    "org-plus-contrib"
-    ))
+	))
 
 (defun load-file-if-exists (file)
   "Load FILE when (file-exists-p FILE); otherwise no-op."
