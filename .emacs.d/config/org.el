@@ -7,6 +7,8 @@
 ;; config
 (setq org-log-done t)
 (setq org-catch-invisible-edits 'smart)
+(setq org-list-demote-modify-bullet t)
+(setq org-list-indent-offset 2)
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -22,7 +24,13 @@
 	  (if (file-accessible-directory-p org-home)
 		  (setq org-directory org-home)))))
 
-(if (or (not (boundp 'org-mobile-directory))
-	   (not org-mobile-directory)
-	   (not (file-accessible-directory-p org-mobile-directory)))
-	(setq org-mobile-directory org-directory))
+;; Set org-mobile-directory to org-directory if uninitialized
+(when (or (not (boundp 'org-mobile-directory))
+		 (not org-mobile-directory)
+		 (not (file-accessible-directory-p org-mobile-directory)))
+  (setq org-mobile-directory org-directory))
+
+;; Add org-directory to org-agenda-files
+(when (and (boundp 'org-directory)
+		 (file-accessible-directory-p org-directory))
+  (add-to-list 'org-agenda-files org-directory))
