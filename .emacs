@@ -41,9 +41,17 @@
     "company-go"
     "company-math"
 
+	;; Google-related packages
+	"google-this"
+	"google-translate"
+
     ;; helm
     "helm"
+	"helm-bibtex"
+	"helm-cider-history"
     "helm-flycheck"
+	"helm-flymake"
+	"helm-go-package"
     "helm-google"
     "helm-gtags"
     "helm-themes"
@@ -93,6 +101,7 @@
 	"go-playground"
 	"go-scratch"
 	"go-stacktracer"
+	"gorepl-mode"
 	"gotest"
 	
     ;; Java
@@ -131,6 +140,7 @@
     ;; misc
     "auctex"
 	"gist"
+	"hackernews"
     "zencoding-mode"
 	))
 

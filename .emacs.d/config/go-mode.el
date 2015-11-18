@@ -3,10 +3,13 @@
 (require 'go-mode)
 
 ;; if GOPATH envar is not defined, define it to be $HOME/go
-(unless (getenv "GOPATH")
-  (let ((home (getenv "HOME")))
-	(when home
-	  (setenv "GOPATH" (concat (file-name-as-directory home) "go")))))
+(let ((gopath (getenv "GOPATH")))
+  (when (or (not gopath)
+		   (string= gopath ""))
+	(let ((home (getenv "HOME")))
+	  (when (and home
+			   (file-exists-p home))
+		(setenv "GOPATH" (concat (file-name-as-directory home) "go"))))))
 
 ;; add $GOPATH/bin to exec-path
 (add-to-list 'exec-path (concat (file-name-as-directory (getenv "GOPATH")) "bin"))
