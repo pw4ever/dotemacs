@@ -19,19 +19,24 @@
 ;; * org-directory has not been set, i.e., is "nil",
 ;; * $HOME/org is an accessible directory.
 (let ((home (getenv "HOME")))
-  (when (and (not (boundp 'org-directory)) (not org-directory) home)
-	(let ((org-home (concat (file-name-as-directory home)
-							"org")))
-	  (if (file-accessible-directory-p org-home)
-		  (setq org-directory org-home)))))
+  (when (and (or (not (boundp 'org-directory))
+	      (not org-directory)
+	      (not (file-accessible-directory-p org-directory)))
+	   home)
+    (let ((org-home (concat (file-name-as-directory home)
+			    "org")))
+      (if (file-accessible-directory-p org-home)
+	  (setq org-directory org-home)))))
 
 ;; Set org-mobile-directory to org-directory if uninitialized
 (when (or (not (boundp 'org-mobile-directory))
-		 (not org-mobile-directory)
-		 (not (file-accessible-directory-p org-mobile-directory)))
+	 (not org-mobile-directory)
+	 (not (file-accessible-directory-p org-mobile-directory)))
   (setq org-mobile-directory org-directory))
 
 ;; Add org-directory to org-agenda-files
 (when (and (boundp 'org-directory)
-		 (file-accessible-directory-p org-directory))
-  (add-to-list 'org-agenda-files org-directory))
+	 (file-accessible-directory-p org-directory))
+  (if (boundp 'org-agenda-files)
+      (add-to-list 'org-agenda-files org-directory)
+    (setq org-agenda-files org-directory)))
