@@ -44,7 +44,7 @@
 (setq nrepl-force-ssh-for-remote-hosts nil)
 
 (setq cider-switch-to-repl-command 'cider-switch-to-relevant-repl-buffer)
-;(setq cider-switch-to-repl-command 'cider-switch-to-current-repl-buffer)
+										;(setq cider-switch-to-repl-command 'cider-switch-to-current-repl-buffer)
 
 ;; REPL history
 (setq cider-repl-wrap-history t)
@@ -52,15 +52,15 @@
 (setq cider-repl-history-file "~/.emacs.d/cider.history")
 
 (dolist (hook '(cider-mode-hook
-		cider-repl-mode-hook
-		clojure-mode-hook))
+				cider-repl-mode-hook
+				clojure-mode-hook))
   (add-hook hook
-	    (lambda ()
-	      ;; turn off ggtags mode to prevent collision
-	      (when (boundp 'ggtags-mode)
-		(ggtags-mode -1))
-	      (when (boundp 'yas-activate-extra-mode)
-		(yas-activate-extra-mode 'clojure-mode))))
+			(lambda ()
+			  ;; turn off ggtags mode to prevent collision
+			  (when (boundp 'ggtags-mode)
+				(ggtags-mode -1))
+			  (when (boundp 'yas-activate-extra-mode)
+				(yas-activate-extra-mode 'clojure-mode))))
   (dolist (mode '(subword-mode hs-minor-mode))
     (add-hook hook mode)))
 
