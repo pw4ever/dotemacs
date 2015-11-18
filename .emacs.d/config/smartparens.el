@@ -1,29 +1,32 @@
 (require 'smartparens-config)
 
-(dolist (hook '(lisp-hook-mode
-		emacs-lisp-mode-hook
-		
-		cider-mode-hook
-		cider-repl-mode-hook
-		clojure-mode-hook
+(dolist
+	(hook '(lisp-hook-mode
+			emacs-lisp-mode-hook
+			
+			cider-mode-hook
+			cider-repl-mode-hook
+			clojure-mode-hook
 
-		go-mode-hook
-                
-		lisp-interaction-mode-hook
-		slime-repl-mode-hook
+			go-mode-hook
 
-		scheme-mode-hook
+			comint-mode-hook
+			
+			lisp-interaction-mode-hook
+			slime-repl-mode-hook
 
-		ess-mode-hook
-		ess-R-post-run-hook
+			scheme-mode-hook
 
-		latex-mode-hook
-		LaTeX-mode-hook))
+			ess-mode-hook
+			ess-R-post-run-hook
+
+			latex-mode-hook
+			LaTeX-mode-hook))
   (add-hook hook (lambda () (smartparens-strict-mode +1))))
 
 ;; https://github.com/Fuco1/smartparens/wiki/Example-configuration
 
-;(smartparens-global-mode t)
+										;(smartparens-global-mode t)
 ;;(smartparens-global-strict-mode t)
 
 ;; highlights matching pairs

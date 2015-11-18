@@ -2,17 +2,28 @@
 
 (require 'go-mode)
 
-;; if GOPATH envar is not defined, define it to be $HOME/go
+;; set $GOPATH to $HOME/go by default
 (let ((gopath (getenv "GOPATH")))
   (when (or (not gopath)
-		   (string= gopath ""))
+		   (string= gopath "")
+		   (not (file-accessible-directory-p gopath)))
 	(let ((home (getenv "HOME")))
 	  (when (and home
-			   (file-exists-p home))
+			   (file-accessible-directory-p home))
 		(setenv "GOPATH" (concat (file-name-as-directory home) "go"))))))
 
 ;; add $GOPATH/bin to exec-path
-(add-to-list 'exec-path (concat (file-name-as-directory (getenv "GOPATH")) "bin"))
+(add-to-list 'exec-path
+			 (concat (file-name-as-directory (getenv "GOPATH"))
+					 "bin"))
+
+;; add $GOROOT/bin to exec-path if $GOROOT is defined
+(let ((goroot (getenv "GOROOT")))
+  (when (and goroot
+		   (file-accessible-directory-p goroot))
+	(add-to-list 'exec-path
+				 (concat (file-name-as-directory goroot)
+						 "bin"))))
 
 ;; recommended by go-mode doc
 (add-hook 'before-save-hook #'gofmt-before-save)
