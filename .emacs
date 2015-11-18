@@ -10,10 +10,12 @@
     "zenburn-theme"
 
     ;; general packages
+	"async"
+	"flx"
+	"flx-ido"
 	"smartparens"
     "rainbow-delimiters"
-    "async"
-    "pretty-mode"
+	"pretty-mode"
     "sr-speedbar"
     ;;"w3m"
     "ggtags"
@@ -24,6 +26,7 @@
 	"popwin"
 	"direx"
 	"point-undo"
+	"eval-sexp-fu"
     
     ;; auto complete
     "auto-complete"
@@ -37,6 +40,7 @@
     "company"
     "company-auctex"
     "company-c-headers"
+	"company-flx"
     "company-ghc"
     "company-go"
     "company-math"
@@ -44,13 +48,18 @@
 	;; Google-related packages
 	"google-this"
 	"google-translate"
+	"google-maps"
+	"google-contacts"
 
     ;; helm
     "helm"
 	"helm-bibtex"
 	"helm-cider-history"
+	"helm-flx"
+	"helm-flyspell"
     "helm-flycheck"
-	"helm-flymake"
+	"helm-fuzzier"
+	"helm-fuzzy-find"
 	"helm-go-package"
     "helm-google"
     "helm-gtags"
@@ -83,11 +92,13 @@
 
     ;; Clojure
     "cider"
+	"cider-eval-sexp-fu"
+    "clj-refactor"
+	"cljr-helm"	
     "clojure-mode"
     "clojure-mode-extra-font-locking"
     "clojure-cheatsheet"
-    "clj-refactor"
-    "slamhound"
+	"slamhound"
     "ac-cider"
     "4clojure"
 
@@ -103,6 +114,7 @@
 	"go-stacktracer"
 	"gorepl-mode"
 	"gotest"
+	"govet"
 	
     ;; Java
     "jdee"

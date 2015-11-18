@@ -46,12 +46,19 @@
 	 (define-key go-mode-map (kbd "C-c C-t t") 'go-test-current-test)
 	 (define-key go-mode-map (kbd "C-c C-t C-t") 'go-test-current-test)))
 
+;; go fmt
 (define-key go-mode-map (kbd "C-c f") 'gofmt)
 (define-key go-mode-map (kbd "C-c C-f") 'gofmt)
 
-;; 
+;; go run
 (define-key go-mode-map (kbd "C-c r") 'go-run)
 (define-key go-mode-map (kbd "C-c C-r") 'go-run)
+
+;; go vet
+(eval-after-load "govet"
+  '(progn
+	 (define-key go-mode-map (kbd "C-c v") 'govet)
+	 (define-key go-mode-map (kbd "C-c C-v") 'govet)))
 
 ;; imports
 (define-key go-mode-map (kbd "C-c C-i g") 'go-goto-imports)
@@ -68,3 +75,7 @@
 (define-key go-mode-map (kbd "C-c C-p C-r") 'go-play-region)
 (define-key go-mode-map (kbd "C-c C-p b") 'go-play-buffer)
 (define-key go-mode-map (kbd "C-c C-p C-b") 'go-play-buffer)
+
+
+
+
