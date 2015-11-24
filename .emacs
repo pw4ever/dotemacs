@@ -4,13 +4,16 @@
 ;;; install (if not yet) and load packages
 (defvar *package-names*
   '(
+	;; first things first
+	"async"
+	"exec-path-from-shell"
+	
     ;; color themes
     "solarized-theme"
     "monokai-theme"
     "zenburn-theme"
 
     ;; general packages
-	"async"
 	"flx"
 	"flx-ido"
 	"smartparens"
