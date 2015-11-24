@@ -100,6 +100,7 @@
 	"cljr-helm"	
     "clojure-mode"
     "clojure-mode-extra-font-locking"
+	"inf-clojure"
     "clojure-cheatsheet"
 	"slamhound"
     "ac-cider"
@@ -161,8 +162,9 @@
 
 (defun load-file-if-exists (file)
   "Load FILE when (file-exists-p FILE); otherwise no-op."
-  (when (file-exists-p file)
-	(load-file file)))
+  (let ((file (expand-file-name file)))
+	(when (file-exists-p file)
+	  (load-file file))))
 
 (load-file-if-exists "~/.emacs.d/config/pre-package-load.el")
 
