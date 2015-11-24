@@ -3,9 +3,13 @@
 # http://stackoverflow.com/a/246128/1527494
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-TARGET=~/.emacs
-cp -v ${DIR}/.emacs ${TARGET}
+NAME=".emacs"
+SOURCE="$DIR/$NAME"
+TARGET="$HOME/$NAME"
+cp -v "$SOURCE" "$TARGET"
 
-TARGET=~/.emacs.d
-mkdir -p ${TARGET}
-cp -vr ${DIR}/.emacs.d/config ${TARGET}
+NAME=".emacs.d"
+SOURCE="$DIR/$NAME"
+TARGET="$HOME/$NAME"
+mkdir -p "$TARGET"
+cp -vr "$SOURCE" "$TARGET"

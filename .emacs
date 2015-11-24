@@ -168,6 +168,11 @@
 
 (load-file-if-exists "~/.emacs.d/config/pre-package-load.el")
 
+(let ((dir (expand-file-name "~/.emacs.d/config/pre-package-load.d/")))
+  (when (file-accessible-directory-p dir)
+	(dolist (f (directory-files dir t "\\.el$"))
+	  (load-file-if-exists f))))
+
 (let ((refreshed-p nil))
   (dolist (package-name *package-names*)
 	(let ((package (intern package-name))
@@ -180,5 +185,10 @@
 	  (load-file-if-exists package-config-path))))
 
 (load-file-if-exists "~/.emacs.d/config/post-package-load.el")
+
+(let ((dir (expand-file-name "~/.emacs.d/config/post-package-load.d/")))
+  (when (file-accessible-directory-p dir)
+	(dolist (f (directory-files dir t "\\.el$"))
+	  (load-file-if-exists f))))
 
 (load-file-if-exists "~/.emacs.local")
