@@ -5,11 +5,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 NAME=".emacs"
 SOURCE="$DIR/$NAME"
-TARGET="$HOME/$NAME"
-cp -v "$SOURCE" "$TARGET"
+cp -v "$SOURCE" "$HOME"
 
 NAME=".emacs.d"
 SOURCE="$DIR/$NAME"
-TARGET="$HOME/$NAME"
-mkdir -p "$TARGET"
-cp -vr "$SOURCE" "$TARGET"
+cp -vr "$SOURCE" "$HOME"
