@@ -17,6 +17,7 @@
 (setq set-mark-command-repeat-pop t)
 
 (add-hook 'prog-mode-hook 'hs-minor-mode)
+(add-hook 'apropos-mode-hook (lambda () (hs-minor-mode -1))) ; apropos-mode does not support hs-minor-mode
 
 (global-linum-mode)
 (line-number-mode)

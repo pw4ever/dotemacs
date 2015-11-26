@@ -61,7 +61,7 @@
 				(ggtags-mode -1))
 			  (when (boundp 'yas-activate-extra-mode)
 				(yas-activate-extra-mode 'clojure-mode))))
-  (dolist (mode '(subword-mode hs-minor-mode))
+  (dolist (mode '(subword-mode))
     (add-hook hook mode)))
 
 ;; ;; integration with other modes
