@@ -3,7 +3,7 @@
 ;; * gore: https://github.com/motemen/gore
 ;;   - go get github.com/motemen/gore
 
-(require 'gorepl-mode)
+;; disable the following line to prevent gorepl-mode everywhere
 
 (eval-after-load "go-mode"
   '(progn
