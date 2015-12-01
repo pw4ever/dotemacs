@@ -9,4 +9,13 @@
 (setq exec-path-from-shell-arguments
 	  (remove "-i" exec-path-from-shell-arguments))
 
-(exec-path-from-shell-initialize)
+;; Only on system that has a built-in compatible shell
+(when (memq system-type
+			'(gnu
+			  gnu/linux
+			  gnu/kfreebsd
+			  darwin
+			  ;; ms-dos
+			  ;; windows-nt
+			  cygwin))
+  (exec-path-from-shell-initialize))
