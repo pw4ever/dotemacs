@@ -5,9 +5,9 @@
 (setq exec-path-from-shell-variables
 	  '("PATH" "MANPATH"))
 
-;; remove use "-i" (interactive) mode to avoid unsightly warnings
-(setq exec-path-from-shell-arguments
-	  (remove "-i" exec-path-from-shell-arguments))
+;; do not warn about wrong startup files
+(setq exec-path-from-shell-check-startup-files
+	  nil)
 
 ;; Only on system that has a built-in compatible shell
 (when (memq system-type
