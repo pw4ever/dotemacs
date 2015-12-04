@@ -70,3 +70,7 @@
 ;; (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 ;; (add-hook 'cider-repl-mode-hook 'company-mode)
 ;; (add-hook 'cider-mode-hook 'company-mode)
+
+;;; customize keybinding
+
+(define-key cider-repl-mode-map (kbd "C-c M-o") 'cider-repl-clear-buffer)
