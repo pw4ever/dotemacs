@@ -10,17 +10,22 @@
 ;; 	     '("gnu" . "http://elpa.gnu.org/packages/"))
 
 (add-to-list 'package-archives
-	     '("org" . "http://orgmode.org/elpa/"))
+			 '("org" . "http://orgmode.org/elpa/"))
 
 
 ;; Milkypostman's Emacs Lisp Pakcage Archive (MELPA)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+			 '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 (add-to-list 'package-archives
-	     '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+			 '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 
 ;; (add-to-list 'package-archives
 ;;              '("marmalade" . "https://marmalade-repo.org/packages/"))
+
+(when (boundp 'package-pinned-packages)
+  (setq package-pinned-packages
+		'((cider . "melpa-stable")
+		  (clj-refactor . "melpa-stable"))))
 
 (package-initialize)
