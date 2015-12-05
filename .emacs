@@ -103,7 +103,7 @@
 	"inf-clojure"
     "clojure-cheatsheet"
 	"slamhound"
-    "ac-cider"
+    ;;"ac-cider"
     "4clojure"
 
 	;; Go
