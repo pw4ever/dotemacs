@@ -1,3 +1,15 @@
+*.elc
+*.swp
 *~
 *.bak
-*.swp
+/*.desktop
+/abbrev_defs
+/ac-comphist.dat
+/cider.history
+*.tgz
+/history
+/recentf
+/saveplace
+/semanticdb
+/tramp
+/var
