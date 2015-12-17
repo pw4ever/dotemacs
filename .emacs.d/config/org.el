@@ -41,4 +41,4 @@
 		   (file-accessible-directory-p org-directory))
   (if (boundp 'org-agenda-files)
       (add-to-list 'org-agenda-files org-directory)
-    (setq org-agenda-files org-directory)))
+    (setq org-agenda-files (list org-directory))))
