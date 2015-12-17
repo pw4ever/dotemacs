@@ -2,11 +2,12 @@
 *.swp
 *~
 *.bak
+*.tgz
+*.tar.gz
 /*.desktop
 /abbrev_defs
 /ac-comphist.dat
 /cider.history
-*.tgz
 /history
 /recentf
 /saveplace
