@@ -1,3 +1,3 @@
 (require 'pretty-mode)
 
-(global-pretty-mode t)
+;; (global-pretty-mode t)
