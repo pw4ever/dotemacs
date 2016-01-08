@@ -152,12 +152,16 @@
     "ess-R-data-view"
     "ess-R-object-popup"
     "ess-smart-equals"
+
+	;; Markdown
+	"markdown-mode"
+	"markdown-toc"
     
     ;; misc
     "auctex"
 	"gist"
 	"hackernews"
-    "zencoding-mode"
+	"zencoding-mode"
 	))
 
 (defun load-file-if-exists (file)
