@@ -8,10 +8,9 @@
   ggtags-mode
   ggtags-mode)
 
-
-
 (eval-after-load 'ggtags
   '(progn
+	 (global-set-key '[f6] 'ggtags-mode)
      (define-key ggtags-mode-map (kbd "M-*") 'ggtags-prev-mark)
      (define-key ggtags-mode-map (kbd "M-[") 'ggtags-prev-mark)
      (define-key ggtags-mode-map (kbd "M-{") 'ggtags-prev-mark)
@@ -22,5 +21,5 @@
 
 ;; do not enable global-ggtags-model:
 ;; * To speed up start-up,
-;; * To prevent hang in case parent path not accessible, e.g., Windows share.
+;; * To prevent hang in case parent path not accessible, e.g., Windows UNC share.
 ;(global-ggtags-mode)
