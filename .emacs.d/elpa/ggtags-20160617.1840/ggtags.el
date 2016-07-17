@@ -1,10 +1,10 @@
 ;;; ggtags.el --- emacs frontend to GNU Global source code tagging system  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2013-2015  Free Software Foundation, Inc.
+;; Copyright (C) 2013-2016  Free Software Foundation, Inc.
 
 ;; Author: Leo Liu <sdl.web@gmail.com>
-;; Version: 0.8.11
-;; Package-Version: 20151214.1344
+;; Version: 0.8.12
+;; Package-Version: 20160617.1840
 ;; Keywords: tools, convenience
 ;; Created: 2013-01-29
 ;; URL: https://github.com/leoliu/ggtags
@@ -1942,7 +1942,12 @@ ggtags: history match invalid, jump to first match instead")
   "Ligher for `ggtags-navigation-mode'; set to nil to disable it.")
 
 (define-minor-mode ggtags-navigation-mode nil
-  :lighter ggtags-navigation-mode-lighter
+  ;; If `ggtags-enable-navigation-keys' is set to nil only display the
+  ;; lighter in `ggtags-mode' buffers.
+  ;; See https://github.com/leoliu/ggtags/issues/124
+  :lighter (:eval (and (or ggtags-enable-navigation-keys
+                           ggtags-mode)
+                       ggtags-navigation-mode-lighter))
   :global t
   (if ggtags-navigation-mode
       (progn
