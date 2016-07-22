@@ -15,7 +15,7 @@
 ;; (custom-set-variables
 ;;  '(cider-server-command "~/tools/bin/lein repl :headless"))
 
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook 'turn-on-eldoc-mode)
 
 (setq nrepl-log-messages t) ; for debugging CIDER
 
