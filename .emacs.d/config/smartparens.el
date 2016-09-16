@@ -25,7 +25,11 @@
 
 			html-mode-hook
 			sgml-mode-hook
-			css-mode-hook))
+			css-mode-hook
+
+			c-mode-hook
+			c++-mode-hook
+			asm-mode-hook))
   (add-hook hook (lambda () (smartparens-strict-mode +1))))
 
 ;; https://github.com/Fuco1/smartparens/wiki/Example-configuration
