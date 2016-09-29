@@ -1,7 +1,7 @@
 ;; https://github.com/m2ym/direx-el
 (require 'direx)
 
-(global-set-key (kbd "<f7>")
+(global-set-key (kbd "C-<f8>")
 				'direx:jump-to-directory-other-window)
 
 (eval-after-load "popwin"

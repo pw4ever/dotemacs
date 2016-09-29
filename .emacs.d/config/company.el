@@ -4,7 +4,7 @@
 (setq company-idle-delay 0)
 (global-set-key (kbd "C-M-i") 'company-complete)
 
-(global-set-key '[f5] 'company-mode)
+(global-set-key (kbd "<f5>") 'company-mode)
 
 ;; (defun indent-or-complete ()
 ;;   (interactive)

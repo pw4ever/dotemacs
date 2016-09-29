@@ -29,7 +29,10 @@
 
 			c-mode-hook
 			c++-mode-hook
-			asm-mode-hook))
+			asm-mode-hook
+
+			java-mode-hook
+			csharp-mode-hook))
   (add-hook hook (lambda () (smartparens-strict-mode +1))))
 
 ;; https://github.com/Fuco1/smartparens/wiki/Example-configuration
@@ -39,6 +42,9 @@
 
 ;; highlights matching pairs
 (show-smartparens-global-mode t)
+
+(global-set-key (kbd "<f7>") 'smartparens-mode)
+(global-set-key (kbd "C-<f7>") 'smartparens-strict-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; keybinding management
