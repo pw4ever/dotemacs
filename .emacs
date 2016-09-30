@@ -130,6 +130,10 @@
     ;; Java
     "jdee"
 
+	;; C#
+	"csharp-mode"
+	"omnisharp"
+
     ;; Haskell
     ;;"haskell-mode"
     ;;"company-cabal"    
