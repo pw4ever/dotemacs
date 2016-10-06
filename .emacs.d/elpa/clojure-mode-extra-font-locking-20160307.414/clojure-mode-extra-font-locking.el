@@ -1,10 +1,10 @@
 ;;; clojure-mode-extra-font-locking.el --- Extra font-locking for Clojure mode
 
-;; Copyright © 2014-2015 Bozhidar Batsov
+;; Copyright © 2014-2016 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20150110.505
+;; Package-Version: 20160307.414
 ;; Version: 3.0.0
 ;; Keywords: languages, lisp
 ;; Package-Requires: ((clojure-mode "3.0"))
@@ -135,7 +135,7 @@
     "unchecked-remainder" "unchecked-remainder-int" "unchecked-short"
     "unchecked-subtract-int" "unchecked-subtract"
     "underive" "unsigned-bit-shift-right" "unquote" "unquote-splicing"
-    "update-in" "update-proxy" "use" "val" "vals" "var-get" "var-set"
+    "update" "update-in" "update-proxy" "use" "val" "vals" "var-get" "var-set"
     "var?" "vary-meta" "vec" "vector" "vector?" "vector-of" "while"
     "with-bindings" "with-bindings*" "with-in-str" "with-loading-context"
     "with-meta" "with-out-str" "with-precision"
@@ -198,9 +198,5 @@
                            0 font-lock-builtin-face)))
 
 (provide 'clojure-mode-extra-font-locking)
-
-;; Local Variables:
-;; indent-tabs-mode: nil
-;; End:
 
 ;;; clojure-mode-extra-font-locking.el ends here

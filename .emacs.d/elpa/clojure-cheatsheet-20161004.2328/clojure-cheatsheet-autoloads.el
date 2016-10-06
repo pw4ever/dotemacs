@@ -1,10 +1,10 @@
 ;;; clojure-cheatsheet-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "clojure-cheatsheet" "clojure-cheatsheet.el"
-;;;;;;  (22130 19477 669802 241000))
+;;;;;;  (22518 45078 859707 269000))
 ;;; Generated autoloads from clojure-cheatsheet.el
 
 (autoload 'clojure-cheatsheet "clojure-cheatsheet" "\
