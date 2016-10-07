@@ -1,4 +1,5 @@
 (setq gc-cons-threshold 20000000) ; https://github.com/lewang/flx
+(setq warning-minimum-level :error)
 (setq inhibit-startup-screen t)
 (setq make-backup-files nil)
 (setq load-prefer-newer t)
