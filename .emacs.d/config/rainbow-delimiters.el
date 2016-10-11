@@ -16,3 +16,9 @@
 		ess-R-post-run-hook))
   (add-hook hook (lambda () (rainbow-delimiters-mode +1))))
 
+(define-globalized-minor-mode global-rainbow-delimiterr-mode
+  rainbow-delimiters-mode
+  (lambda ()
+	(rainbow-delimiters-mode 1)))
+
+(global-rainbow-delimiterr-mode 1)

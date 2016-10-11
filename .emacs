@@ -21,6 +21,8 @@
     "zenburn-theme"
 
     ;; general packages
+	"hlinum"
+	"linum-relative"
 	"flx"
 	"flx-ido"
 	"smartparens"
@@ -218,7 +220,7 @@
  '(ggtags-mode-prefix-key "")
  '(package-selected-packages
    (quote
-	(zencoding-mode zenburn-theme use-package unify-opening sr-speedbar solarized-theme smartparens slamhound runner rainbow-delimiters pretty-mode popwin point-undo org-plus-contrib omnisharp monokai-theme markdown-toc jdee java-snippets inf-clojure hideshow-org helm-themes helm-package helm-make helm-helm-commands helm-gtags helm-google helm-go-package helm-fuzzy-find helm-fuzzier helm-flyspell helm-flycheck helm-flx helm-cider-history helm-bibtex hackernews govet gorepl-mode google-translate google-this google-maps google-contacts go-stacktracer go-snippets go-scratch go-playground go-errcheck go-eldoc go-direx go-complete go-autocomplete gist ggtags flycheck-color-mode-line flycheck-clojure flx-ido exec-path-from-shell ess-smart-equals ess-R-object-popup ess-R-data-view datomic-snippets company-math company-go company-ghc company-flx company-c-headers company-auctex clojure-snippets cljr-helm cider-eval-sexp-fu ac-math ac-ispell ac-html ac-helm ac-etags 4clojure))))
+	(zencoding-mode zenburn-theme use-package unify-opening sr-speedbar solarized-theme smartparens slamhound runner rainbow-delimiters pretty-mode popwin point-undo org-plus-contrib omnisharp monokai-theme markdown-toc linum-relative jdee java-snippets inf-clojure hlinum hideshow-org helm-themes helm-package helm-make helm-helm-commands helm-gtags helm-google helm-go-package helm-fuzzy-find helm-fuzzier helm-flyspell helm-flycheck helm-flx helm-cider-history helm-bibtex hackernews govet gorepl-mode google-translate google-this google-maps google-contacts go-stacktracer go-snippets go-scratch go-playground go-errcheck go-eldoc go-direx go-complete go-autocomplete gist ggtags flycheck-color-mode-line flycheck-clojure flx-ido exec-path-from-shell ess-smart-equals ess-R-object-popup ess-R-data-view datomic-snippets company-math company-go company-ghc company-flx company-c-headers company-auctex clojure-snippets clojure-mode-extra-font-locking clojure-cheatsheet cljr-helm cider-eval-sexp-fu ac-math ac-ispell ac-html ac-helm ac-etags 4clojure))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
