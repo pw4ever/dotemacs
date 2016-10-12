@@ -30,7 +30,7 @@
 	"pretty-mode"
     "sr-speedbar"
     ;;"w3m"
-    "ggtags"
+    ;;"ggtags"
     "unify-opening"
     "use-package"
     "runner"
@@ -65,8 +65,11 @@
 
     ;; helm
     "helm"
+	"f3"
 	"helm-bibtex"
 	"helm-cider-history"
+	"helm-company"
+	"helm-dired-history"
 	"helm-flx"
 	"helm-flyspell"
     "helm-flycheck"
@@ -79,6 +82,7 @@
     "helm-helm-commands"
     "helm-make"
     "helm-package"
+	"helm-themes"
 
 	;; Org Mode
 	"org"
