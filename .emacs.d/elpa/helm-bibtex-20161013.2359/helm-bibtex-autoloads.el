@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "helm-bibtex" "helm-bibtex.el" (22529 3555
-;;;;;;  659991 789000))
+;;;### (autoloads nil "helm-bibtex" "helm-bibtex.el" (22529 42881
+;;;;;;  515512 440000))
 ;;; Generated autoloads from helm-bibtex.el
 
 (autoload 'helm-bibtex "helm-bibtex" "\
@@ -25,7 +25,7 @@ With a prefix ARG the cache is invalidated and the bibliography reread.
 ;;;***
 
 ;;;### (autoloads nil nil ("bibtex-completion.el" "helm-bibtex-pkg.el")
-;;;;;;  (22529 3555 653325 100000))
+;;;;;;  (22529 42881 515512 440000))
 
 ;;;***
 
