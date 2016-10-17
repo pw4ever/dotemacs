@@ -3,7 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "go-guru" "go-guru.el" (22528 24449 98979 924000))
+;;;### (autoloads nil "go-guru" "go-guru.el" (22528 13393 311844
+;;;;;;  324000))
 ;;; Generated autoloads from go-guru.el
 
 (autoload 'go-guru-set-scope "go-guru" "\
@@ -100,7 +101,8 @@ timeout.
 
 ;;;***
 
-;;;### (autoloads nil "go-mode" "go-mode.el" (22528 24449 92313 226000))
+;;;### (autoloads nil "go-mode" "go-mode.el" (22528 13393 298510
+;;;;;;  954000))
 ;;; Generated autoloads from go-mode.el
 
 (autoload 'go-mode "go-mode" "\
@@ -192,7 +194,8 @@ Tries to look for a URL at point.
 
 ;;;***
 
-;;;### (autoloads nil nil ("go-mode-pkg.el") (22528 24449 92313 226000))
+;;;### (autoloads nil nil ("go-mode-pkg.el") (22528 13393 295177
+;;;;;;  612000))
 
 ;;;***
 
