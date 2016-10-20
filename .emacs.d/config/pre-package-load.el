@@ -8,6 +8,8 @@
       browse-url-generic-program "firefox")
 (setq bookmark-save-flag 1) ; save bookmarks after every modifications
 
+(prefer-coding-system 'utf-8)
+
 (require 'saveplace)
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)

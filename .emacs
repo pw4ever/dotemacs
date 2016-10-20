@@ -39,6 +39,7 @@
 	"direx"
 	"point-undo"
 	"eval-sexp-fu"
+	"0blayout"
     
     ;; auto complete
     "auto-complete"

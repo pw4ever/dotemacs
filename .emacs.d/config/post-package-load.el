@@ -1,5 +1,7 @@
 ;;; set color theme
 
+;; (load-theme 'adwaita)
+
 ;;(load-theme 'solarized-light t)
 ;;(load-theme 'solarized-dark t)
 
