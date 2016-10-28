@@ -1,8 +1,7 @@
 (require 'helm)
+
 (require 'helm-config)
-(require 'helm-eshell)
-(require 'helm-files)
-(require 'helm-grep)
+
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
@@ -14,7 +13,7 @@
 
 (setq
  helm-google-suggest-use-curl-p t
- helm-scroll-amount 4 ; scroll 4 lines other window using M-<next>/M-<prior>
+ helm-scroll-amount 8 ; scroll 4 lines other window using M-<next>/M-<prior>
  helm-quick-update t ; do not display invisible candidates
  helm-idle-delay 0.01 ; be idle for this many seconds, before updating in delayed sources.
  helm-input-idle-delay 0.01 ; be idle for this many seconds, before updating candidate buffer
