@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "smartparens" "smartparens.el" (22547 54312
-;;;;;;  918525 880000))
+;;;### (autoloads nil "smartparens" "smartparens.el" (22549 45740
+;;;;;;  991516 892000))
 ;;; Generated autoloads from smartparens.el
 
 (autoload 'sp-cheat-sheet "smartparens" "\
@@ -12,7 +12,7 @@ Generate a cheat sheet of all the smartparens interactive functions.
 
 Without a prefix argument, print only the short documentation and examples.
 
-With non-nil prefix argument, show the full documentation for each function.
+With non-nil prefix argument ARG, show the full documentation for each function.
 
 You can follow the links to the function or variable help page.
 To get back to the full list, use \\[help-go-back].
@@ -29,15 +29,12 @@ better orientation.
 Keymap used for `smartparens-mode'.")
 
 (autoload 'sp-use-paredit-bindings "smartparens" "\
-Initiate `smartparens-mode-map' with paredit-compatible bindings for
-corresponding functions provided by smartparens.  See variable
-`sp-paredit-bindings'.
+Initiate `smartparens-mode-map' with `sp-paredit-bindings'.
 
 \(fn)" t nil)
 
 (autoload 'sp-use-smartparens-bindings "smartparens" "\
-Initiate `smartparens-mode-map' with smartparens bindings for navigation functions.
-See variable `sp-smartparens-bindings'.
+Initiate `smartparens-mode-map' with `sp-smartparens-bindings'.
 
 \(fn)" t nil)
 
@@ -185,8 +182,8 @@ Turn off `show-smartparens-mode'.
 ;;;;;;  "smartparens-ess.el" "smartparens-haskell.el" "smartparens-html.el"
 ;;;;;;  "smartparens-latex.el" "smartparens-lua.el" "smartparens-pkg.el"
 ;;;;;;  "smartparens-python.el" "smartparens-racket.el" "smartparens-ruby.el"
-;;;;;;  "smartparens-rust.el" "smartparens-scala.el") (22547 54312
-;;;;;;  958526 26000))
+;;;;;;  "smartparens-rust.el" "smartparens-scala.el") (22549 45741
+;;;;;;  8181 602000))
 
 ;;;***
 

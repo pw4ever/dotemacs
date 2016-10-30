@@ -1,29 +1,30 @@
 (require 'helm)
-
 (require 'helm-config)
 
+;; https://tuhdo.github.io/helm-intro.html
+
+;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
+;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-(define-key helm-grep-mode-map (kbd "<return>")  'helm-grep-mode-jump-other-window)
-(define-key helm-grep-mode-map (kbd "n")  'helm-grep-mode-jump-other-window-forward)
-(define-key helm-grep-mode-map (kbd "p")  'helm-grep-mode-jump-other-window-backward)
+(when (executable-find "curl")
+  (setq helm-google-suggest-use-curl-p t))
 
 (setq
- helm-google-suggest-use-curl-p t
  helm-scroll-amount 8 ; scroll 4 lines other window using M-<next>/M-<prior>
- helm-quick-update t ; do not display invisible candidates
- helm-idle-delay 0.01 ; be idle for this many seconds, before updating in delayed sources.
- helm-input-idle-delay 0.01 ; be idle for this many seconds, before updating candidate buffer
  helm-ff-search-library-in-sexp t ; search for library in `require' and `declare-function' sexp.
 
  helm-split-window-default-side 'other ;; open helm buffer in another window
  helm-split-window-in-side-p t ;; open helm buffer inside current window, not occupy whole other window
  helm-buffers-favorite-modes (append helm-buffers-favorite-modes
                                      '(picture-mode artist-mode))
- helm-candidate-number-limit 200 ; limit the number of displayed canidates
+ ;;helm-candidate-number-limit 200 ; limit the number of displayed canidates
  helm-M-x-requires-pattern 0     ; show all candidates when set to 0
  helm-boring-file-regexp-list
  '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$") ; do not show these files in helm buffer
@@ -35,24 +36,34 @@
                                         ; useful in helm-mini that lists buffers
  )
 
-(define-key helm-map (kbd "C-x 2") 'helm-select-2nd-action)
-(define-key helm-map (kbd "C-x 3") 'helm-select-3rd-action)
-(define-key helm-map (kbd "C-x 4") 'helm-select-4rd-action)
+;; https://github.com/thierryvolpiatto/emacs-tv-config/blob/master/init-helm-thierry.el#L96
 
+(global-unset-key (kbd "M-x"))
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-c h s") 'helm-semantic-or-imenu)
-(global-set-key (kbd "C-c h m") 'helm-man-woman)
-(global-set-key (kbd "C-c h f") 'helm-find)
-(global-set-key (kbd "C-c h l") 'helm-locate)
-(global-set-key (kbd "C-c h o") 'helm-occur)
-(global-set-key (kbd "C-c h r") 'helm-resume)
-(global-set-key (kbd "C-c m") 'helm-all-mark-rings)
-
-(define-key 'help-command (kbd "C-f") 'helm-apropos)
-(define-key 'help-command (kbd "r") 'helm-info-emacs)
+(global-set-key (kbd "C-c <SPC>") 'helm-all-mark-rings)
+(global-set-key (kbd "C-x r b")                      'helm-filtered-bookmarks)
+(global-set-key (kbd "C-h r") 'helm-info-emacs)
+(global-set-key (kbd "C-:") 'helm-eval-expression-with-eldoc)
+(global-set-key (kbd "C-,") 'helm-calcul-expression)
+(global-set-key (kbd "C-h d") 'helm-info-at-point)
+(global-set-key (kbd "C-h i") 'helm-info)
+(global-set-key (kbd "C-x C-d") 'helm-browse-project)
+(global-set-key (kbd "<f1>") 'helm-resume)
+(global-set-key (kbd "C-h C-f") 'helm-apropos)
+(global-set-key (kbd "C-h a") 'helm-apropos)
+(global-set-key (kbd "<f2>") 'helm-execute-kmacro)
+(global-set-key (kbd "C-c i") 'helm-imenu-in-all-buffers)
+(global-set-key (kbd "C-s") 'helm-occur)
+(define-key global-map [remap jump-to-register]      'helm-register)
+(define-key global-map [remap list-buffers] 'helm-mini)
+(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+(define-key global-map (kbd "M-g a") 'helm-do-grep-ag)
+(define-key global-map (kbd "M-g g") 'helm-grep-do-git-grep)
+(define-key global-map (kbd "M-g i") 'helm-gid)
+(define-key global-map (kbd "C-x r p") 'helm-projects-history)
 
 ;; use helm to list eshell history
 (add-hook 'eshell-mode-hook
