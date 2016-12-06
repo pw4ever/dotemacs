@@ -8,6 +8,8 @@
 			cider-repl-mode-hook
 			clojure-mode-hook
 
+			org-mode-hook
+
 			go-mode-hook
 
 			comint-mode-hook

@@ -10,6 +10,7 @@
 (setq org-list-demote-modify-bullet t)
 (setq org-list-indent-offset 2)
 (setq org-use-speed-commands t)
+(setq org-enforce-todo-dependencies t)
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
