@@ -1,2 +1,2 @@
 (require 'helm-fuzzier)
-(helm-fuzzier-mode 1)
+;;(helm-fuzzier-mode 1)
