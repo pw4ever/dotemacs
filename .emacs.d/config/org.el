@@ -9,6 +9,7 @@
 (setq org-catch-invisible-edits 'smart)
 (setq org-list-demote-modify-bullet t)
 (setq org-list-indent-offset 2)
+(setq org-use-speed-commands t)
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
