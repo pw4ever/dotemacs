@@ -11,6 +11,7 @@
 (setq org-list-indent-offset 2)
 (setq org-use-speed-commands t)
 (setq org-enforce-todo-dependencies t)
+(setq org-default-notes-file "~/notes.org")
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
