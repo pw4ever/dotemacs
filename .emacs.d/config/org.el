@@ -31,13 +31,18 @@
       (if (file-accessible-directory-p org-home)
 		  (setq org-directory org-home)))))
 
-;; Set org-mobile-directory to org-directory if uninitialized
-(when (or (not (boundp 'org-mobile-directory))
-		  (not org-mobile-directory)
-		  (not (file-accessible-directory-p org-mobile-directory)))
-  (when (and (boundp 'org-directory)
-			 (file-accessible-directory-p org-directory))
-	(setq org-mobile-directory org-directory)))
+;; org-mobile-directory defaults to "$HOME/org-mobile/" if:
+;; * org-mobile-directory has not been set, i.e., is "nil",
+;; * "$HOME/org-mobile" is an accessible directory.
+(let ((home (getenv "HOME")))
+  (when (and (or (not (boundp 'org-mobile-directory))
+				 (not org-mobile-directory)
+				 (not (file-accessible-directory-p org-mobile-directory)))
+			 home)
+    (let ((org-home (concat (file-name-as-directory home)
+							"org-mobile")))
+      (if (file-accessible-directory-p org-home)
+		  (setq org-mobile-directory org-home)))))
 
 ;; Add org-directory to org-agenda-files
 (when (and (boundp 'org-directory)
