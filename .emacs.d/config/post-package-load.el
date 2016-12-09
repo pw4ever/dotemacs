@@ -1,13 +1,25 @@
-;;; set color theme
+;;
+;; Load $HOME/theme.el, which should contain a single "load-theme" funcall, if it exists.
+;; This allowes customization without touching the version-controlled config.
+;;
 
-;; (load-theme 'adwaita)
-
-;;(load-theme 'solarized-light t)
-;;(load-theme 'solarized-dark t)
-
-;;(load-theme 'zenburn t)
-
-(load-theme 'monokai t)
+;; color themes:
+;; - adwaita
+;; - solarized-light
+;; - solarized-dark
+;; - zenburn
+;; - monokai
+(let* ((default-theme 'monokai)
+	   (home (getenv "HOME"))
+	   (theme-file-name (and home
+							 (concat (file-name-as-directory home)
+									 "theme.el")))
+	   (theme-file (and theme-file-name
+						(file-exists-p theme-file-name)
+						theme-file-name)))
+  (if theme-file
+	  (load-file theme-file)
+	(load-theme default-theme t)))
 
 ;;; clear comint buffer
 ;; http://emacsredux.com/blog/2015/01/18/clear-comint-buffers/
