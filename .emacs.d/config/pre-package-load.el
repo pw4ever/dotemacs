@@ -23,6 +23,7 @@
 (add-hook 'apropos-mode-hook (lambda () (hs-minor-mode -1))) ; apropos-mode does not support hs-minor-mode
 
 (global-linum-mode)
+(global-visual-line-mode)
 (line-number-mode)
 (column-number-mode)
 (size-indication-mode)
