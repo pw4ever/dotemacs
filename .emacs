@@ -14,7 +14,7 @@
 	;; first things first
 	"async"
 	"exec-path-from-shell"
-	
+
     ;; color themes
     "solarized-theme"
     "monokai-theme"
@@ -40,17 +40,21 @@
 	"point-undo"
 	"eval-sexp-fu"
 	"0blayout"
-    
-    ;; auto complete
+
+    ;; auto complete mode
     "auto-complete"
+	"ac-c-headers"
+	"ac-capf"							; completion at point
+	"ac-clang"
 	"ac-cider"
+	"ac-emoji"
     "ac-helm"
     "ac-math"
     "ac-ispell"
     "ac-etags"
     "ac-html"
 
-    ;; company
+    ;; company mode
     "company"
     "company-auctex"
     "company-c-headers"
@@ -74,7 +78,7 @@
 	"helm-dired-history"
 	"helm-flx"
 	"helm-flyspell"
-    "helm-flycheck"
+    ;;"helm-flycheck"
 	;;"helm-fuzzier" ; helm-fuzzier breaks completing-read for, e.g.,  Clojure CIDER's REPL shortcut handler.
 	"helm-fuzzy-find"
 	"helm-go-package"
@@ -88,8 +92,8 @@
 
 	;; Org Mode
 	"org"
-    "org-plus-contrib"
-	
+    ;;"org-plus-contrib"
+
     ;; snippets
     "yasnippet"
     "java-snippets"
@@ -103,7 +107,7 @@
 	"flycheck-clojure"
 
 	;; !!! DO NOT USE the built-in flymake; use flycheck as above
-    
+
     ;; Common Lisp
     ;;"slime"
     ;;"ac-slime"
@@ -112,7 +116,7 @@
     "cider"
 	"cider-eval-sexp-fu"
     "clj-refactor"
-	"cljr-helm"	
+	"cljr-helm"
     "clojure-mode"
     "clojure-mode-extra-font-locking"
 	"inf-clojure"
@@ -126,7 +130,7 @@
 	"go-autocomplete"
 	"go-complete"
 	"go-direx"
-	"go-eldoc"	
+	"go-eldoc"
 	"go-errcheck"
 	"go-playground"
 	"go-scratch"
@@ -134,7 +138,7 @@
 	"gorepl-mode"
 	"gotest"
 	"govet"
-	
+
     ;; Java
     "jdee"
 
@@ -144,7 +148,7 @@
 
     ;; Haskell
     ;;"haskell-mode"
-    ;;"company-cabal"    
+    ;;"company-cabal"
     ;;"ac-haskell-process"
     ;;"flycheck-haskell"
     ;;"hi2"
@@ -175,7 +179,7 @@
 	;; Markdown
 	"markdown-mode"
 	"markdown-toc"
-    
+
     ;; misc
     "auctex"
 	"gist"
@@ -228,7 +232,7 @@
  '(helm-gtags-path-style (quote relative))
  '(package-selected-packages
    (quote
-	(ac-cider zencoding-mode zenburn-theme use-package unify-opening sr-speedbar solarized-theme smartparens slamhound runner rainbow-delimiters pretty-mode popwin point-undo org-plus-contrib omnisharp monokai-theme markdown-toc linum-relative jdee java-snippets inf-clojure hlinum hideshow-org helm-themes helm-package helm-make helm-helm-commands helm-gtags helm-google helm-go-package helm-fuzzy-find helm-flyspell helm-flycheck helm-flx helm-dired-history helm-company helm-cider-history helm-bibtex hackernews govet gorepl-mode google-translate google-this google-maps google-contacts go-stacktracer go-snippets go-scratch go-playground go-errcheck go-eldoc go-direx go-complete go-autocomplete gist flycheck-color-mode-line flycheck-clojure flx-ido f3 exec-path-from-shell ess-smart-equals ess-R-object-popup ess-R-data-view datomic-snippets company-math company-go company-ghc company-flx company-c-headers company-auctex clojure-snippets clojure-mode-extra-font-locking clojure-cheatsheet cljr-helm cider-eval-sexp-fu ac-math ac-ispell ac-html ac-helm ac-etags 4clojure 0blayout))))
+	(company-math company-go company-ghc company-flx company-c-headers company-auctex zencoding-mode zenburn-theme use-package unify-opening sr-speedbar solarized-theme smartparens slamhound runner rainbow-delimiters pretty-mode popwin point-undo omnisharp monokai-theme markdown-toc linum-relative jdee java-snippets inf-clojure hlinum hideshow-org helm-themes helm-package helm-make helm-helm-commands helm-gtags helm-google helm-go-package helm-fuzzy-find helm-flyspell helm-flycheck helm-flx helm-dired-history helm-company helm-cider-history helm-bibtex hackernews govet gorepl-mode google-translate google-this google-maps google-contacts go-stacktracer go-snippets go-scratch go-playground go-errcheck go-eldoc go-direx go-complete go-autocomplete gist ghc flycheck-color-mode-line flycheck-clojure flx-ido f3 exec-path-from-shell ess-smart-equals ess-R-object-popup ess-R-data-view datomic-snippets clojure-snippets clojure-mode-extra-font-locking clojure-cheatsheet cljr-helm cider-eval-sexp-fu auctex ac-math ac-ispell ac-html ac-helm ac-etags ac-emoji ac-clang ac-cider ac-capf ac-c-headers 4clojure 0blayout))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

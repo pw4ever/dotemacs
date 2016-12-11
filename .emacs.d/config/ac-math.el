@@ -9,4 +9,4 @@
 
 (add-hook 'latex-mode-hook 'ac-latex-mode-setup)
 
-(ac-flyspell-workaround)
+;;(ac-flyspell-workaround)

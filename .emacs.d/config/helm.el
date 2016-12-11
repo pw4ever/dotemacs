@@ -22,9 +22,7 @@
 
  helm-split-window-default-side 'other ;; open helm buffer in another window
  helm-split-window-in-side-p t ;; open helm buffer inside current window, not occupy whole other window
- helm-buffers-favorite-modes (append helm-buffers-favorite-modes
-                                     '(picture-mode artist-mode))
- ;;helm-candidate-number-limit 200 ; limit the number of displayed canidates
+ helm-candidate-number-limit 200 ; limit the number of displayed canidates
  helm-M-x-requires-pattern 0     ; show all candidates when set to 0
  helm-boring-file-regexp-list
  '("\\.git$" "\\.hg$" "\\.svn$" "\\.CVS$" "\\._darcs$" "\\.la$" "\\.o$" "\\.i$") ; do not show these files in helm buffer

@@ -8,6 +8,7 @@
       browse-url-generic-program "firefox")
 (setq bookmark-save-flag 1) ; save bookmarks after every modifications
 
+;;(prefer-coding-system 'latin-0)			; edit source code
 (prefer-coding-system 'utf-8)
 
 (require 'saveplace)
@@ -42,19 +43,8 @@
 
 ;; (add-hook 'after-change-major-mode-hook 'hl-line-mode) ; hl-line-mode is a buffer-local minor mode
 
-;;(global-set-key '[f9] 'shell)
+(global-set-key '[f11] 'shell)
 (global-set-key '[f12] 'compile)
-
-;; flyspell mode
-;; http://www.emacswiki.org/emacs/FlySpell
-(add-hook 'text-mode-hook 'flyspell-mode)
-(setq flyspell-issue-message-flag nil)
-(global-set-key '[f11] 'flyspell-mode)
-(eval-after-load "helm"
-  '(progn
-	 (global-set-key (kbd "C-c # w") 'helm-flyspell-correct)))
-(global-set-key (kbd "C-c # b") 'flyspell-buffer)
-
 
 ;; add ~/.emacs.d/config/00deps/ to load-path so can require'd the dependencies
 (let ((dep-dirname (expand-file-name "00deps"

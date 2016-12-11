@@ -1,10 +1,10 @@
 ;;; ac-math-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ac-math" "ac-math.el" (22130 19327 750006
-;;;;;;  744000))
+;;;### (autoloads nil "ac-math" "ac-math.el" (22604 50457 992270
+;;;;;;  756000))
 ;;; Generated autoloads from ac-math.el
 
 (defvar ac-source-latex-commands '((candidates . math-symbol-list-latex-commands) (symbol . "c") (prefix . ac-math-prefix)))

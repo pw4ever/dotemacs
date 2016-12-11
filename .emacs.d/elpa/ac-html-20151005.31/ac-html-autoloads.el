@@ -1,10 +1,10 @@
 ;;; ac-html-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ac-html-core" "ac-html-core.el" (22130 19346
-;;;;;;  36648 605000))
+;;;### (autoloads nil "ac-html-core" "ac-html-core.el" (22604 50473
+;;;;;;  652233 569000))
 ;;; Generated autoloads from ac-html-core.el
 
 (autoload 'ac-html-define-data-provider "ac-html-core" "\
@@ -13,7 +13,7 @@ This macro is buggy and cannot be used now.
 
 \(fn PROVIDER &rest PAIRS)" nil t)
 
-(put 'ac-html-define-data-provider 'lisp-indent-function '1)
+(function-put 'ac-html-define-data-provider 'lisp-indent-function '1)
 
 (autoload 'ac-html-enable-data-provider "ac-html-core" "\
 Enable data provider PROVIDER.
@@ -25,13 +25,13 @@ Define ac-html lang with this macro.
 
 \(fn LANG &rest PAIRS)" nil t)
 
-(put 'ac-html-define-ac-source 'lisp-indent-function '1)
+(function-put 'ac-html-define-ac-source 'lisp-indent-function '1)
 
 ;;;***
 
 ;;;### (autoloads nil nil ("ac-haml.el" "ac-html-default-data-provider.el"
 ;;;;;;  "ac-html-pkg.el" "ac-html-testing-data-provider.el" "ac-html.el"
-;;;;;;  "ac-jade.el" "ac-slim.el") (22130 19346 58535 50000))
+;;;;;;  "ac-jade.el" "ac-slim.el") (22604 50473 672233 521000))
 
 ;;;***
 
