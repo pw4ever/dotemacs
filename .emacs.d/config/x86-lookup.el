@@ -4,6 +4,10 @@
 
 (global-set-key (kbd "C-h x") #'x86-lookup)
 
+;; the default build-in pdf browse function hangs Emacs on the large "intel-sdm.pdf".
+(setq x86-lookup-browse-pdf-function
+	  #'x86-lookup-browse-pdf-evince)
+
 (let ((home (getenv "HOME")))
   (when (and (boundp 'home)
 			 home)
