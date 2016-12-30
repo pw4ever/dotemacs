@@ -56,8 +56,8 @@
     (visit-tags-table my-tags-file)))
 
 (setq-default c-default-style "linux"
-			  tab-width 4
-			  indent-tabs-mode t)
+              tab-width 8
+              indent-tabs-mode nil)
 
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
