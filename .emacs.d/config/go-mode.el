@@ -25,8 +25,11 @@
 				 (concat (file-name-as-directory goroot)
 						 "bin"))))
 
+;; use goimports as drop-in replacement for gofmt
+(setq gofmt-command "goimports")
+
 ;; recommended by go-mode doc
-(add-hook 'before-save-hook #'gofmt-before-save)
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 ;; go get github.com/rogpeppe/godef
 (add-hook 'go-mode-hook (lambda ()
@@ -47,7 +50,7 @@
 (eval-after-load "gotest"
   '(progn
 	 (define-key go-mode-map (kbd "C-c C-t b") 'go-test-current-benchmark)
-	 (define-key go-mode-map (kbd "C-c C-t C-b") 'go-test-current-benchmark)    
+	 (define-key go-mode-map (kbd "C-c C-t C-b") 'go-test-current-benchmark)
 	 (define-key go-mode-map (kbd "C-c C-t c") 'go-test-current-coverage)
 	 (define-key go-mode-map (kbd "C-c C-t C-c") 'go-test-current-coverage)
 	 (define-key go-mode-map (kbd "C-c C-t f") 'go-test-current-file)
@@ -79,14 +82,10 @@
 (define-key go-mode-map (kbd "C-c C-i u") 'go-remove-unused-imports)
 (define-key go-mode-map (kbd "C-c C-i C-u") 'go-remove-unused-imports)
 
-;; play 
+;; play
 (define-key go-mode-map (kbd "C-c C-p d") 'go-download-play)
 (define-key go-mode-map (kbd "C-c C-p C-d") 'go-download-play)
 (define-key go-mode-map (kbd "C-c C-p r") 'go-play-region)
 (define-key go-mode-map (kbd "C-c C-p C-r") 'go-play-region)
 (define-key go-mode-map (kbd "C-c C-p b") 'go-play-buffer)
 (define-key go-mode-map (kbd "C-c C-p C-b") 'go-play-buffer)
-
-
-
-
