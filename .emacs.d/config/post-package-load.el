@@ -10,16 +10,16 @@
 ;; - zenburn
 ;; - monokai
 (let* ((default-theme 'monokai)
-	   (home (getenv "HOME"))
-	   (theme-file-name (and home
-							 (concat (file-name-as-directory home)
-									 "theme.el")))
-	   (theme-file (and theme-file-name
-						(file-exists-p theme-file-name)
-						theme-file-name)))
+       (home (getenv "HOME"))
+       (theme-file-name (and home
+                             (concat (file-name-as-directory home)
+                                     "theme.el")))
+       (theme-file (and theme-file-name
+                        (file-exists-p theme-file-name)
+                        theme-file-name)))
   (if theme-file
-	  (load-file theme-file)
-	(load-theme default-theme t)))
+      (load-file theme-file)
+    (load-theme default-theme t)))
 
 ;;; clear comint buffer
 ;; http://emacsredux.com/blog/2015/01/18/clear-comint-buffers/
@@ -56,8 +56,9 @@
     (visit-tags-table my-tags-file)))
 
 (setq-default c-default-style "linux"
-			  tab-width 4
-			  indent-tabs-mode t)
+              tab-width 4
+              indent-tabs-mode nil
+              show-trailing-whitespace t)
 
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
