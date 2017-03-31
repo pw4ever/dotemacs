@@ -43,8 +43,7 @@
 
 ;; (add-hook 'after-change-major-mode-hook 'hl-line-mode) ; hl-line-mode is a buffer-local minor mode
 
-(global-set-key '[f11] 'shell)
-(global-set-key '[f12] 'compile)
+(global-set-key (kbd "<f12>") 'compile)
 
 ;; add ~/.emacs.d/config/00deps/ to load-path so can require'd the dependencies
 (let ((dep-dirname (expand-file-name "00deps"
