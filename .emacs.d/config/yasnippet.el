@@ -6,6 +6,8 @@
   (kbd "TAB") nil)
 (define-key yas-minor-mode-map
   (kbd "C-;") 'yas-expand)
+(define-key yas-minor-mode-map
+  (kbd "C-,") 'yas-expand)
 
 (define-key yas-minor-mode-map
   (kbd "C-'") 'yas-next-field-or-maybe-expand)

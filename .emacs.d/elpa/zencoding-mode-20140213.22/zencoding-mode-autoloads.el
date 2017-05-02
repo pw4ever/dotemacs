@@ -1,10 +1,10 @@
 ;;; zencoding-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "zencoding-mode" "zencoding-mode.el" (22130
-;;;;;;  19533 369725 604000))
+;;;### (autoloads nil "zencoding-mode" "zencoding-mode.el" (22792
+;;;;;;  52809 391808 615000))
 ;;; Generated autoloads from zencoding-mode.el
 
 (autoload 'zencoding-expand-line "zencoding-mode" "\
