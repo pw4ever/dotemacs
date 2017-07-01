@@ -40,7 +40,8 @@
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
 
+(require 'server)
 (if (eq system-type 'windows-nt)
     (defun server-ensure-safe-dir (dir)
-      "Nop"
+      "Override original definition to circumvent Emacs on Windows bug."
       t))
