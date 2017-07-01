@@ -1,3 +1,5 @@
+(setq custom-safe-themes t)             ; consider all themes as safe
+
 ;;
 ;; Load $HOME/theme.el, which should contain a single "load-theme" funcall, if it exists.
 ;; This allowes customization without touching the version-controlled config.
@@ -20,5 +22,3 @@
   (if theme-file
       (load-file theme-file)
     (load-theme default-theme t)))
-
-(setq custom-safe-themes t)             ; Consider all themes as safe.
