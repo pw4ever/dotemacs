@@ -1,4 +1,4 @@
-(defvar find-file-read-only-p t
+(defvar find-file-read-only-p nil
   "Visit file in read-only mode by default; avoid clobbering file inadvertantly.")
 
 (add-hook 'find-file-hooks
