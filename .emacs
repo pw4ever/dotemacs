@@ -20,27 +20,6 @@
     "monokai-theme"
     "zenburn-theme"
 
-    ;; general packages
-    "hlinum"
-    "linum-relative"
-    "flx"
-    "flx-ido"
-    "smartparens"
-    "rainbow-delimiters"
-    "pretty-mode"
-    "sr-speedbar"
-    ;;"w3m"
-    ;;"ggtags"
-    "unify-opening"
-    "use-package"
-    "runner"
-    "hideshow-org"
-    "popwin"
-    "direx"
-    "point-undo"
-    "eval-sexp-fu"
-    "0blayout"
-
     ;; auto complete mode
     "auto-complete"
     "ac-c-headers"
@@ -199,6 +178,27 @@
     "emmet-mode"
     "xahk-mode"
     "zencoding-mode"
+
+    ;; general packages
+    "hlinum"
+    "linum-relative"
+    "flx"
+    "flx-ido"
+    "smartparens"
+    "rainbow-delimiters"
+    "pretty-mode"
+    "sr-speedbar"
+    ;;"w3m"
+    ;;"ggtags"
+    "unify-opening"
+    "use-package"
+    "runner"
+    "hideshow-org"
+    "popwin"
+    "direx"
+    "point-undo"
+    "eval-sexp-fu"
+    "0blayout"
     ))
 
 (defun load-file-if-exists (file)
