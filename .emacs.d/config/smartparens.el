@@ -3,7 +3,7 @@
 (dolist
 	(hook '(lisp-hook-mode
 			emacs-lisp-mode-hook
-			
+
 			cider-mode-hook
 			cider-repl-mode-hook
 			clojure-mode-hook
@@ -13,7 +13,7 @@
 			go-mode-hook
 
 			comint-mode-hook
-			
+
 			lisp-interaction-mode-hook
 			slime-repl-mode-hook
 
@@ -33,9 +33,19 @@
 			c++-mode-hook
 			asm-mode-hook
 
+            js-mode-hook
+            js-jsx-mode-hook
+            js2-mode-hook
+            js2-jsx-mode-hook
+            js2-minor-mode-hook
+            indium-repl-mode-hook
+            indium-interaction-mode-hook
+
 			java-mode-hook
 			csharp-mode-hook))
-  (add-hook hook (lambda () (smartparens-strict-mode +1))))
+  (when (boundp hook)
+    (message "Added smartparens-strict-mode to hook %s." hook)
+    (add-hook hook (lambda () (smartparens-strict-mode +1)))))
 
 ;; https://github.com/Fuco1/smartparens/wiki/Example-configuration
 
