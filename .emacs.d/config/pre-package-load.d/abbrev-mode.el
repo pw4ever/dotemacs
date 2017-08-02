@@ -1,0 +1,5 @@
+(setq abbrev-file-name "~/.emacs_abbrev_def")
+(setq save-abbrevs t)
+(setq-default abbrev-mode t)
+(when (file-exists-p abbrev-file-name)
+  (quietly-read-abbrev-file))
