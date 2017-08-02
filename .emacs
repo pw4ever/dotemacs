@@ -214,7 +214,10 @@
     (dolist (f (directory-files dir t "\\.el$"))
       (load-file-if-exists f))))
 
-(let ((refreshed-p nil))
+;; Refresh package on startup only if EMACS_REFRESH_PACKAGE environment variable is defined.
+(let ((refreshed-p (if (getenv "EMACS_REFRESH_PACKAGE")
+                       nil
+                     t)))
   (dolist (package-name *package-names*)
     (let ((package (intern package-name))
           (package-config-path (format "~/.emacs.d/config/%s.el" package-name)))
