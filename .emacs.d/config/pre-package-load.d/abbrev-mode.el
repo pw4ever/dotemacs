@@ -1,4 +1,6 @@
 (setq abbrev-file-name "~/.emacs_abbrev_def")
+(unless (file-exists-p abbrev-file-name)
+  (write-region "" nil abbrev-file-name))
 (setq save-abbrevs t)
 (setq-default abbrev-mode t)
 (when (file-exists-p abbrev-file-name)
