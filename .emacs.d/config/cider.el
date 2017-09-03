@@ -74,3 +74,6 @@
 ;;; customize keybinding
 
 (define-key cider-repl-mode-map (kbd "C-c M-o") 'cider-repl-clear-buffer)
+
+;; https://github.com/clojure-emacs/cider/issues/1960
+(setq cider-lein-parameters "repl :headless :host 127.0.0.1")
