@@ -1,0 +1,13 @@
+(setq evil-auto-indent t)
+(setq evil-shift-width 8)
+(setq evil-repeat-move-cursor t)
+(setq evil-find-skip-newlines nil)
+(setq evil-want-fine-undo nil)
+(setq evil-regexp-search t)
+(setq evil-search-wrap t)
+(setq evil-flash-delay 10)
+(setq evil-want-C-i-jump t)
+(setq evil-want-C-u-scroll nil)
+
+(require 'evil)
+(evil-mode +1)
