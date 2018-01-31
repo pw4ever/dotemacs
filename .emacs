@@ -219,7 +219,7 @@
   (let ((file (expand-file-name file)))
     (when (file-exists-p file)
       (ignore-errors
-	(load-file file)))))
+        (load-file file)))))
 
 (load-file-if-exists "~/.emacs.d/config/pre-package-load.el")
 
@@ -230,16 +230,17 @@
 
 ;; Refresh package on startup only if EMACS_REFRESH_PACKAGE environment variable is defined.
 (let ((refreshed-p (if (getenv "EMACS_REFRESH_PACKAGE")
-		       nil
-		     t)))
+                       nil
+                     t)))
   (dolist (package-name *package-names*)
     (let ((package (intern package-name))
-	  (package-config-path (format "~/.emacs.d/config/%s.el" package-name)))
-      (unless (package-installed-p package)
-	(unless refreshed-p
-	  (package-refresh-contents)
-	  (setq refreshed-p t))
-	(package-install package))
+          (package-config-path (format "~/.emacs.d/config/%s.el" package-name)))
+      (ignore-errors
+        (unless (package-installed-p package)
+          (unless refreshed-p
+            (package-refresh-contents)
+            (setq refreshed-p t))
+          (package-install package)))
       (load-file-if-exists package-config-path))))
 
 (load-file-if-exists "~/.emacs.d/config/post-package-load.el")
