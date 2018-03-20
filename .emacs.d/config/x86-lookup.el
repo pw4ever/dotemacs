@@ -4,10 +4,6 @@
 
 (global-set-key (kbd "C-h x") #'x86-lookup)
 
-;; the default build-in pdf browse function hangs Emacs on the large "intel-sdm.pdf".
-(setq x86-lookup-browse-pdf-function
-	  #'x86-lookup-browse-pdf-evince)
-
 (let ((home (getenv "HOME")))
   (when (and (boundp 'home)
 			 home)
@@ -39,3 +35,27 @@ This function requires the pdftotext command line program."
                finally (cl-return
                         (cl-remove-duplicates
                          index :key #'car :test #'string= :from-end t))))))
+
+(defun x86-lookup-browse-pdf-sumatrapdf (pdf page)
+  "View PDF at PAGE using Sumatra PDF."
+  (start-process "sumatrapdf" nil "sumatrapdf" "-page" (format "%d" page) pdf))
+
+;; Hack the definition of x86-lookup-browser-pdf-any.
+;; * Add SumatraPDF as a PDF browser.
+;; * Deprioritize doc-view because it hangs Emacs when opening the 20+MB Intel SDM.
+(defun x86-lookup-browse-pdf-any (pdf page)
+  "Try visiting PDF using the first viewer found."
+  (or (ignore-errors (x86-lookup-browse-pdf-evince pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-sumatrapdf pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-xpdf pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-okular pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-gv pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-zathura pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-mupdf pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-browser pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-pdf-tools pdf page))
+      (ignore-errors (x86-lookup-browse-pdf-doc-view pdf page))
+      (error "Could not find a PDF viewer.")))
+
+(setq x86-lookup-browse-pdf-function
+	  #'x86-lookup-browse-pdf-any)
