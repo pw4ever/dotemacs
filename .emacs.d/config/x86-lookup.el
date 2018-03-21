@@ -19,7 +19,7 @@
   "Create an index alist from PDF mapping mnemonics to page numbers.
 This function requires the pdftotext command line program."
   (let ((mnemonic (concat "\\(?:.*\n\n?\\)?"
-                          "\\([[:alnum:]/]+\\)[[:blank:]]*\\(?:--\\|—\\).*\n\n?"
+                          "\\([[:alnum:]/[:blank:]]+\\)[[:blank:]]*\\(?:--\\|—\\).*\n\n?"
                           "Opcode"
                           ))
 		(coding-system-for-read 'utf-8)
