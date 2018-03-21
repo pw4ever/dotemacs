@@ -38,6 +38,20 @@ This function requires the pdftotext command line program."
                         (cl-remove-duplicates
                          index :key #'car :test #'string= :from-end t))))))
 
+(defun x86-lookup-ensure-and-update-index ()
+  "Ensure the PDF index has been created and updated."
+  (interactive)
+  (cond
+   ((null x86-lookup-pdf)
+    (error "No PDF available. Set `x86-lookup-pdf'."))
+   ((not (file-exists-p x86-lookup-pdf))
+    (error "PDF not found. Check `x86-lookup-pdf'."))
+   ((progn
+      (message "Generating mnemonic index ...")
+      (setf x86-lookup-index (x86-lookup-create-index))
+      (x86-lookup--save-index x86-lookup-pdf x86-lookup-index)
+      (message "Finish generating mnemonic index.")))))
+
 (defun x86-lookup-browse-pdf-sumatrapdf (pdf page)
   "View PDF at PAGE using Sumatra PDF."
   (start-process "sumatrapdf" nil "sumatrapdf" "-page" (format "%d" page) pdf))
@@ -60,4 +74,4 @@ This function requires the pdftotext command line program."
       (error "Could not find a PDF viewer.")))
 
 (setq x86-lookup-browse-pdf-function
-	  #'x86-lookup-browse-pdf-any)
+      #'x86-lookup-browse-pdf-any)
