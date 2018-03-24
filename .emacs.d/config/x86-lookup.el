@@ -14,48 +14,6 @@
 				 (not x86-lookup-pdf))
 		(setq x86-lookup-pdf default-x86-lookup-pdf)))))
 
-;; Hack the definition of `x86-lookup-create-index' to make sure the coding system is utf-8.
-(cl-defun x86-lookup-create-index (&optional (pdf x86-lookup-pdf))
-  "Create an index alist from PDF mapping mnemonics to page numbers.
-This function requires the pdftotext command line program."
-  (let ((mnemonic (concat "\\(?:.*\n\n?\\)?"
-                          "\\([[:alnum:]/[:blank:]]+\\)[[:blank:]]*\\(?:--\\|—\\)\\(?:.*\n\n?\\)\\{1,3\\}"
-                          "[[:blank:]]*Opcode"
-                          ))
-		(coding-system-for-read 'utf-8)
-		(coding-system-for-write 'utf-8)
-        (case-fold-search t))
-    (with-temp-buffer
-      (call-process x86-lookup-pdftotext-program nil t nil
-                    (file-truename pdf) "-")
-      (setf (point) (point-min))
-      (cl-loop for page upfrom 1
-               while (< (point) (point-max))
-               when (looking-at mnemonic)
-               nconc (x86-lookup--expand (match-string 1) page) into index
-               do (forward-page)
-               finally (cl-return
-                        (cl-remove-duplicates
-                         index :key #'car :test #'string= :from-end t))))))
-
-(defun x86-lookup-ensure-and-update-index ()
-  "Ensure the PDF index has been created and updated."
-  (interactive)
-  (cond
-   ((null x86-lookup-pdf)
-    (error "No PDF available. Set `x86-lookup-pdf'."))
-   ((not (file-exists-p x86-lookup-pdf))
-    (error "PDF not found. Check `x86-lookup-pdf'."))
-   ((progn
-      (message "Generating mnemonic index ...")
-      (setf x86-lookup-index (x86-lookup-create-index))
-      (x86-lookup--save-index x86-lookup-pdf x86-lookup-index)
-      (message "Finish generating mnemonic index.")))))
-
-(defun x86-lookup-browse-pdf-sumatrapdf (pdf page)
-  "View PDF at PAGE using Sumatra PDF."
-  (start-process "sumatrapdf" nil "sumatrapdf" "-page" (format "%d" page) pdf))
-
 ;; Hack the definition of x86-lookup-browser-pdf-any.
 ;; * Add SumatraPDF as a PDF browser.
 ;; * Deprioritize doc-view because it hangs Emacs when opening the 20+MB Intel SDM.
