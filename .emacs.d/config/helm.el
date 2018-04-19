@@ -58,7 +58,7 @@
 (define-key global-map [remap jump-to-register]      'helm-register)
 (define-key global-map [remap list-buffers] 'helm-mini)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-(define-key global-map (kbd "M-g a") 'helm-do-grep-ag)
+(define-key global-map (kbd "M-g a") 'helm-do-ag)
 (define-key global-map (kbd "M-g g") 'helm-grep-do-git-grep)
 (define-key global-map (kbd "M-g i") 'helm-gid)
 (define-key global-map (kbd "C-x r p") 'helm-projects-history)
@@ -73,4 +73,8 @@
 
 (helm-autoresize-mode +1)
 (helm-mode +1)
+
+
+
+
 
