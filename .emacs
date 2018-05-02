@@ -250,7 +250,13 @@
     (dolist (f (directory-files dir t "\\.el$"))
       (load-file-if-exists f))))
 
-(load-file-if-exists "~/.emacs.local")
+(load-file-if-exists "~/.emacs.local")  ; for backward compatiblity of previous config
+(load-file-if-exists "~/.emacs.d/config/local.el")
+(let ((dir (expand-file-name "~/.emacs.d/config/local.d/")))
+  (when (file-accessible-directory-p dir)
+    (dolist (f (directory-files dir t "\\.el$"))
+      (load-file-if-exists f))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
