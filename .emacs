@@ -251,8 +251,8 @@
       (load-file-if-exists f))))
 
 (load-file-if-exists "~/.emacs.local")  ; for backward compatiblity of previous config
-(load-file-if-exists "~/.emacs.d/config/local.el")
-(let ((dir (expand-file-name "~/.emacs.d/config/local.d/")))
+(load-file-if-exists "~/.emacs.d/local.el")
+(let ((dir (expand-file-name "~/.emacs.d/local.d/")))
   (when (file-accessible-directory-p dir)
     (dolist (f (directory-files dir t "\\.el$"))
       (load-file-if-exists f))))
