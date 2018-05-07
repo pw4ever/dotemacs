@@ -11,12 +11,13 @@
 (eval-after-load 'ggtags
   '(progn
 	 (global-set-key (kbd "<f6>") 'ggtags-mode)
-     (define-key ggtags-mode-map (kbd "M-*") 'ggtags-prev-mark)
-     (define-key ggtags-mode-map (kbd "M-[") 'ggtags-prev-mark)
-     (define-key ggtags-mode-map (kbd "M-{") 'ggtags-prev-mark)
-     (define-key ggtags-mode-map (kbd "M-}") 'ggtags-next-mark)
-     (define-key ggtags-mode-map (kbd "M-?") 'ggtags-show-definition)
-     (define-key ggtags-mode-map (kbd "M-/") 'ggtags-find-file)
+	 (global-set-key (kbd "C-<f6>") 'global-ggtags-mode)
+     ;; (define-key ggtags-mode-map (kbd "M-*") 'ggtags-prev-mark)
+     ;; (define-key ggtags-mode-map (kbd "M-[") 'ggtags-prev-mark)
+     ;; (define-key ggtags-mode-map (kbd "M-{") 'ggtags-prev-mark)
+     ;; (define-key ggtags-mode-map (kbd "M-}") 'ggtags-next-mark)
+     ;; (define-key ggtags-mode-map (kbd "M-?") 'ggtags-show-definition)
+     ;; (define-key ggtags-mode-map (kbd "M-/") 'ggtags-find-file)
      ))
 
 ;; do not enable global-ggtags-model:

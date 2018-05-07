@@ -202,7 +202,7 @@
     "pretty-mode"
     "sr-speedbar"
     ;;"w3m"
-    ;;"ggtags"
+    "ggtags"
     "unify-opening"
     "use-package"
     "runner"
@@ -265,6 +265,7 @@
  '(ac-etags-requires 1)
  '(ac-ispell-fuzzy-limit 2)
  '(ac-ispell-requires 4)
+ '(ggtags-mode-prefix-key "")
  '(helm-gtags-auto-update nil)
  '(helm-gtags-ignore-case t)
  '(helm-gtags-path-style (quote relative))
