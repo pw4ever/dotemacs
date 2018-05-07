@@ -1,3 +1,4 @@
+(setq evil-default-state 'emacs)
 (setq evil-auto-indent t)
 (setq evil-shift-width 8)
 (setq evil-repeat-move-cursor t)
