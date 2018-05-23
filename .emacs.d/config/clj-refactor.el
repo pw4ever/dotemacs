@@ -8,3 +8,5 @@
   (add-hook hook (lambda ()
 				   (clj-refactor-mode +1))))
 
+(setq cljr-suppress-no-project-warning t
+      cljr-suppress-middleware-warnings t)
