@@ -77,3 +77,10 @@
 
 ;; https://github.com/clojure-emacs/cider/issues/1960
 (setq cider-lein-parameters "repl :headless :host 127.0.0.1")
+
+;; clojure-cli is not available at this moment (May 2018) on Microsoft OS,
+;; default to "lein" instead.
+(setq cider-default-repl-command
+      (cl-case system-type
+        ((windows-nt ms-dos cygwin) "lein")
+        (t "clojure-cli")))
