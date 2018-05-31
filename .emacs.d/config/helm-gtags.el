@@ -14,7 +14,7 @@
 ;; key bindings
 (eval-after-load "helm-gtags"
   '(progn
-	 (global-set-key (kbd "<f6>") 'helm-gtags-mode)
+	 (global-set-key (kbd "<f6>") 'global-helm-gtags-mode)
 	 (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
 	 (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-previous-history)
 	 (define-key helm-gtags-mode-map (kbd "C-M-,") 'helm-gtags-next-history)
@@ -25,5 +25,4 @@
      (define-key helm-gtags-mode-map (kbd "M-g M-u") 'helm-gtags-update-tags)
 	 (define-key helm-gtags-mode-map (kbd "M-g [") 'helm-gtags-previous-history)
      (define-key helm-gtags-mode-map (kbd "M-g ]") 'helm-gtags-next-history)
-     
 	 (define-key helm-gtags-mode-map (kbd "M-/") 'helm-gtags-find-files)))

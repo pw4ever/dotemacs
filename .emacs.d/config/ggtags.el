@@ -10,7 +10,6 @@
 
 (eval-after-load 'ggtags
   '(progn
-	 (global-set-key (kbd "<f6>") 'ggtags-mode)
 	 (global-set-key (kbd "C-<f6>") 'global-ggtags-mode)
      ;; (define-key ggtags-mode-map (kbd "M-*") 'ggtags-prev-mark)
      ;; (define-key ggtags-mode-map (kbd "M-[") 'ggtags-prev-mark)
