@@ -5,7 +5,19 @@
 (setq load-prefer-newer t)
 (setq highlight-nonselected-windows t)
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "firefox")
+      browse-url-generic-program
+      (let ((progs (append (list  (getenv "BROWSER")
+                                  (getenv "EMACS_BROWSER"))
+                           (pcase system-type
+                             ('windows-nt '("chrome"
+                                            "firefox"))
+                             (_ '("google-chrome-stable"
+                                  "chromium"
+                                  "firefox"))))))
+        (dolist (prog progs)
+          (when (and prog
+                     (executable-find prog))
+            (return prog)))))
 (setq bookmark-save-flag 1) ; save bookmarks after every modifications
 
 ;;(prefer-coding-system 'latin-0)			; edit source code
