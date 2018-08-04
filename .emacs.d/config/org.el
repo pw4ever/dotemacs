@@ -12,7 +12,7 @@
 (setq org-use-speed-commands t)
 (setq org-enforce-todo-dependencies t)
 (setq org-default-notes-file "~/notes.org")
-(setq org-todo-keywords '((sequence "TODO(t)" "IN-PROGRESS(i)" "HOLD(h)" "|" "DOME(d)" "CANCELED(r)")))
+(setq org-todo-keywords '((sequence "TODO(t)" "IN-PROGRESS(i)" "HOLD(h)" "|" "DONE(d)" "CANCELED(r)")))
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
