@@ -7,7 +7,6 @@
 ;; config
 (setq org-log-done t)
 (setq org-catch-invisible-edits 'smart)
-(setq org-list-demote-modify-bullet t)
 (setq org-list-indent-offset 2)
 (setq org-use-speed-commands t)
 (setq org-enforce-todo-dependencies t)
