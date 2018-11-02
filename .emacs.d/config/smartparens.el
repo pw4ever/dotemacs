@@ -42,7 +42,9 @@
             indium-interaction-mode-hook
 
 			java-mode-hook
-			csharp-mode-hook))
+			csharp-mode-hook
+
+            groovy-mode))
   (when (boundp hook)
     (message "Added smartparens-strict-mode to hook %s." hook)
     (add-hook hook (lambda () (smartparens-strict-mode +1)))))
