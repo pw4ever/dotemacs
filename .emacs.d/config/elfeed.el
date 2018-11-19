@@ -1,5 +1,10 @@
 ;; https://github.com/skeeto/elfeed
-(global-set-key (kbd "C-x w f") 'elfeed) ; allow C-x w to be used for
+(require 'elfeed)
+
+(setq elfeed-feeds nil)
+(setq-default elfeed-search-filter "@2-week-ago +unread")
+
+(global-set-key (kbd "C-x w f") 'elfeed)
 
 ;;
 ;; Setting up further feeds. Recommended: ~/.emacs.d/local.d/elfeed.el
