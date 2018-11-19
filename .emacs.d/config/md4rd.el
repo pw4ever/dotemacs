@@ -13,7 +13,9 @@
         linux+kernel
         emacs
         java+jvm
-        windows+dotnet))
+        windows+dotnet
+        cscareerquestions
+        osdev))
 
 ;;
 ;; re-defuns
