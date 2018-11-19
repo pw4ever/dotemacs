@@ -12,8 +12,8 @@
         Clojure+Clojurescript
         linux+kernel
         emacs
-        java
-        windows))
+        java+jvm
+        windows+dotnet))
 
 ;;
 ;; re-defuns
