@@ -1,1 +1,1 @@
-(setq save-abbrev 'silently)
+(setq save-abbrevs 'silently)
