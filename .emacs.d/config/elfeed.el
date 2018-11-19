@@ -6,8 +6,16 @@
 
 (global-set-key (kbd "C-x w f") 'elfeed)
 
+(setq elfeed-feeds
+      '(("http://brendangregg.com/blog/rss.xml" perf system personal)
+        ("http://nullprogram.com/feed/" emacs elfeed programming personal)
+        ("http://lambda-the-ultimate.org/rss.xml" programming theory syndicate)
+        ("http://planet.emacsen.org/atom.xml" emacs syndicate)
+        ("https://lwn.net/headlines/rss" linux)
+        ("https://lwn.net/headlines/Features" linux)))
+
 ;;
-;; Setting up further feeds. Recommended: ~/.emacs.d/local.d/elfeed.el
+;; Further customization in ~/.emacs.d/local.d/elfeed.el
 ;;
 ;; (append-to-list 'elfeed-feeds
 ;;                 '(("http://brendangregg.com/blog/rss.xml" perf system personal)
