@@ -81,6 +81,7 @@
     (define-key newmap (kbd "p") 'widget-backward)
     (define-key newmap (kbd "k") 'widget-backward)
     (define-key newmap (kbd "l") 'forward-button)
+    (define-key newmap (kbd "q") 'kill-current-buffer)
     (use-local-map newmap)))
 
 (add-hook 'md4rd-mode-hook 'my-set-md4rd-local-keymap)
