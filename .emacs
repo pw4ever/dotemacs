@@ -141,6 +141,14 @@
     "gotest"
     "govet"
 
+    ;; rtags
+    "rtags"
+    "helm-rtags"
+    "ac-rtags"
+    "company-rtags"
+    "flycheck-rtags"
+    "ivy-rtags"
+
     ;; Java
     "jdee"
 
