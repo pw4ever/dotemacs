@@ -1,10 +1,10 @@
 ;; https://github.com/Andersbakken/rtags
 
 ;; WARNING: Make sure rdm/rc are compatible with the rtags.el etc
-;; RECOMMENDATION: Clone and build rtags on the target system (tip: using "cmake -DCMAKE_INSTALL_PREFIX=PATH:$HOME/usr" to install to $HOME/usr).
-
-;; preparation
-;; for i in gcc g++ cc c++; do ln -sf $(which gcc-rtags-wrapper.sh) ~/bin/$i; done
+;; RECOMMENDATION: Clone and build rtags on the target system.
+;; 
+;; Tip: Clone, build, and install rtags into "HOME/usr".
+;; git clone --recursive https://github.com/Andersbakken/rtags.git; cd rtags; mkdir build; cd build; cmake -DCMAKE_INSTALL_PREFIX=$HOME/usr ..; make -j$(nproc) all install
 
 (require 'rtags)
 (require 'gtags)
