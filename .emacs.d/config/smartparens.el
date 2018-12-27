@@ -10,6 +10,8 @@
 
 			;;org-mode-hook
 
+            cmake-mode-hook
+
 			go-mode-hook
 
 			comint-mode-hook
