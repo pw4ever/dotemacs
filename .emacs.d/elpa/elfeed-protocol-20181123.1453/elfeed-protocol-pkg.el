@@ -1,8 +1,7 @@
-(define-package "elfeed-protocol" "20181117.1159" "Provide owncloud/ttrss protocols for elfeed"
+(define-package "elfeed-protocol" "20181123.1453" "Provide owncloud/ttrss protocols for elfeed"
   '((emacs "24.4")
     (elfeed "2.1.1")
-    (cl-lib "0.5")
-    (auth-source "0"))
+    (cl-lib "0.5"))
   :keywords
   '("news")
   :authors
