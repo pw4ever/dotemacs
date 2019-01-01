@@ -60,7 +60,7 @@
 (define-key c-mode-base-map (kbd "M-;") (function tags-find-file))
 (define-key c-mode-base-map (kbd "C-.") (function tags-find-symbol))
 (define-key c-mode-base-map (kbd "C-,") (function tags-find-references))
-(define-key c-mode-base-map (kbd "C-<") (function rtags-find-virtuals-at-point))
+;;(define-key c-mode-base-map (kbd "C-<") (function rtags-find-virtuals-at-point))
 (define-key c-mode-base-map (kbd "M-i") (function tags-imenu))
 
 (defun tags-history-prev ()
@@ -75,5 +75,5 @@
       (rtags-location-stack-forward)
     (ggtags-next-mark)))
 
-(define-key c-mode-base-map (kbd "M-<") (function tags-history-prev))
-(define-key c-mode-base-map (kbd "M->") (function tags-history-next))
+(define-key c-mode-base-map (kbd "C-<") (function tags-history-prev))
+(define-key c-mode-base-map (kbd "C->") (function tags-history-next))
