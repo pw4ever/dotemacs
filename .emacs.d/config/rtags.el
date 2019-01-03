@@ -77,3 +77,6 @@
 
 (define-key c-mode-base-map (kbd "C-<") (function tags-history-prev))
 (define-key c-mode-base-map (kbd "C->") (function tags-history-next))
+
+;; Promote rtags keybinding globally.
+(rtags-enable-standard-keybindings global-map "C-c r")
