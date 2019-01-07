@@ -50,3 +50,26 @@
   (if (boundp 'org-agenda-files)
       (add-to-list 'org-agenda-files org-directory)
     (setq org-agenda-files (list org-directory))))
+
+;;
+;; org-crypt
+;;
+
+(require 'org-crypt)
+(org-crypt-use-before-save-magic)
+(setq org-crypt-disable-auto-save 'encrypt)
+
+(defun org-crypt-enable-keymap ()
+  (interactive)
+  (define-key org-mode-map (kbd "C-c e") 'org-encrypt-entry)
+  (define-key org-mode-map (kbd "C-c C-e") 'org-encrypt-entries)
+  (define-key org-mode-map (kbd "C-c d") 'org-decrypt-entry)
+  (define-key org-mode-map (kbd "C-c C-d") 'org-decrypt-entries))
+
+(org-crypt-enable-keymap)
+
+;; (add-to-list 'org-tags-exclude-from-inheritance "crypt")
+;; ;; or (setq org-tags-exclude-from-inheritance nil)
+;; (setq org-crypt-tag-matcher "crypt")
+
+(setq org-crypt-key nil) ; symmetric encryption
