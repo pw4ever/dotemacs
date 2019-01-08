@@ -62,9 +62,9 @@
 (defun org-crypt-enable-keymap ()
   (interactive)
   (define-key org-mode-map (kbd "C-c e") 'org-encrypt-entry)
-  (define-key org-mode-map (kbd "C-c C-e") 'org-encrypt-entries)
+  (define-key org-mode-map (kbd "C-c E") 'org-encrypt-entries)
   (define-key org-mode-map (kbd "C-c d") 'org-decrypt-entry)
-  (define-key org-mode-map (kbd "C-c C-d") 'org-decrypt-entries))
+  (define-key org-mode-map (kbd "C-c D") 'org-decrypt-entries))
 
 (org-crypt-enable-keymap)
 
