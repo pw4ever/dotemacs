@@ -1,9 +1,8 @@
 #!/bin/bash - 
 
-# http://stackoverflow.com/a/246128/1527494
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+_rootdir=${_rootdir:-"$(dirname "$(readlink -f "$0")")"}
 
-rm -rf ${DIR}/.emacs
-rm -rf ${DIR}/.emacs.d/config
-rm -rf ${DIR}/.emacs.d/elpa
-${DIR}/pull.sh
+rm -rf "$_rootdir"/.emacs
+rm -rf "$_rootdir"/.emacs.d/{config,elpa}
+
+"$_rootdir/pull.sh"

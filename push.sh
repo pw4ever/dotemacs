@@ -1,12 +1,11 @@
 #!/bin/bash - 
 
-# http://stackoverflow.com/a/246128/1527494
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+_rootdir=${_rootdir:-"$(dirname "$(readlink -f "$0")")"}
 
-NAME=".emacs"
-SOURCE="$DIR/$NAME"
-cp -v "$SOURCE" "$HOME"
+if hash rsync 2>/dev/null; then
+  cmd="rsync -rvhtW --no-compress --progress"
+else
+  cmd="cp -rv"
+fi
 
-NAME=".emacs.d"
-SOURCE="$DIR/$NAME"
-cp -vr "$SOURCE" "$HOME"
+eval $cmd \"$_rootdir\"/.emacs{,.d} \"$HOME\"

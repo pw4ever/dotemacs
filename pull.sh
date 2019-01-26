@@ -1,35 +1,17 @@
 #!/bin/bash - 
 
-# http://stackoverflow.com/a/246128/1527494
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+_rootdir=${_rootdir:-"$(dirname "$(readlink -f "$0")")"}
 
-NAME=.emacs
-SOURCE="$HOME/$NAME"
-TARGET="$DIR/$NAME"
-cp -v "$SOURCE" "$TARGET"
+if hash rsync 2>/dev/null; then
+  cmd="rsync -rvhtW --no-compress --progress"
+else
+  cmd="cp -rv"
+fi
 
-NAME=".emacs.d/elpa"
-SOURCE="$HOME/$NAME"
-TARGET="$DIR/.emacs.d"
-mkdir -p "$TARGET"
-cp -vr "$SOURCE/" "$TARGET"
-find "$DIR/$NAME" -name '*.elc' -delete # remove byte-compiled elisp files
+eval $cmd \"$HOME\"/.emacs \"$_rootdir\"
 
-NAME=".emacs.d/config"
-SOURCE="$HOME/$NAME"
-TARGET="$DIR/$NAME"
-mkdir -p "$TARGET"
-cp -vr "$SOURCE/"*.el "$TARGET"
-cp -vr "$SOURCE/"00deps "$TARGET"
-
-NAME=".emacs.d/config/pre-package-load.d"
-SOURCE="$HOME/$NAME"
-TARGET="$DIR/$NAME"
-mkdir -p "$TARGET"
-cp -vr "$SOURCE/"*.el "$TARGET"
-
-NAME=".emacs.d/config/post-package-load.d"
-SOURCE="$HOME/$NAME"
-TARGET="$DIR/$NAME"
-mkdir -p "$TARGET"
-cp -vr "$SOURCE/"*.el "$TARGET"
+_target="$_rootdir/.emacs.d"
+mkdir -p "_target"
+eval $cmd \"$HOME\"/.emacs.d/{elpa,config} \"$_target\"
+find "$_target" -name '*.elc' -delete # remove byte-compiled elisp files
+unset _target
