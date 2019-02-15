@@ -23,8 +23,8 @@
 ;; (add-to-list 'package-archives
 ;;              '("marmalade" . "https://marmalade-repo.org/packages/"))
 
-(when (boundp 'package-pinned-packages)
-  (setq package-pinned-packages
-		'((cider . "melpa-stable"))))
+;; (when (boundp 'package-pinned-packages)
+;;   (setq package-pinned-packages
+;; 		'((cider . "melpa-stable"))))
 
 (package-initialize)
