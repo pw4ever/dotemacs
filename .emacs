@@ -207,6 +207,10 @@
     "cmake-font-lock"
     "cpputils-cmake"
 
+    ;; Scala
+    "ensime"
+    "flycheck-ensime"
+
     ;; misc
     "auctex"
     "cmake-mode"
@@ -302,7 +306,7 @@
  '(helm-gtags-path-style (quote relative))
  '(package-selected-packages
    (quote
-    ("cider" cmake-font-lock cmake-ide cmake-mode cmake-project cpputils-cmake md4rd elfeed elfeed-goodies elfeed-org elfeed-protocol elfeed-web systemtap-mode gradle-mode groovy-imports groovy-mode org lua-mode evil-magit evil-matchit evil-nerd-commenter magit magithub ag helm-ag evil-smartparens evil xahk-mode powershell zencoding-mode emmet-mode helm-emmet engine-mode helm-cider json-mode nasm-mode company-math company-go company-ghc company-flx company-c-headers sr-speedbar slamhound runner rainbow-delimiters pretty-mode popwin point-undo monokai-theme markdown-toc linum-relative jdee java-snippets inf-clojure hlinum hideshow-org helm-themes helm-package helm-make helm-helm-commands helm-gtags helm-google helm-go-package helm-fuzzy-find helm-flx helm-dired-history helm-company helm-cider-history helm-bibtex hackernews govet gorepl-mode google-translate google-this google-contacts go-stacktracer go-snippets go-scratch go-playground go-errcheck go-eldoc go-direx go-complete go-autocomplete gist ghc flycheck-color-mode-line flycheck-clojure flx-ido f3 exec-path-from-shell ess-smart-equals ess-R-object-popup ess-R-data-view datomic-snippets clojure-snippets clojure-mode-extra-font-locking clojure-cheatsheet cljr-helm cider-eval-sexp-fu auctex ac-math ac-html ac-helm ac-etags ac-emoji ac-clang ac-cider ac-capf ac-c-headers 4clojure 0blayout))))
+    (ensime flycheck-ensime "cider" cmake-font-lock cmake-ide cmake-mode cmake-project cpputils-cmake md4rd elfeed elfeed-goodies elfeed-org elfeed-protocol elfeed-web systemtap-mode gradle-mode groovy-imports groovy-mode org lua-mode evil-magit evil-matchit evil-nerd-commenter magit magithub ag helm-ag evil-smartparens evil xahk-mode powershell zencoding-mode emmet-mode helm-emmet engine-mode helm-cider json-mode nasm-mode company-math company-go company-ghc company-flx company-c-headers sr-speedbar slamhound runner rainbow-delimiters pretty-mode popwin point-undo monokai-theme markdown-toc linum-relative jdee java-snippets inf-clojure hlinum hideshow-org helm-themes helm-package helm-make helm-helm-commands helm-gtags helm-google helm-go-package helm-fuzzy-find helm-flx helm-dired-history helm-company helm-cider-history helm-bibtex hackernews govet gorepl-mode google-translate google-this google-contacts go-stacktracer go-snippets go-scratch go-playground go-errcheck go-eldoc go-direx go-complete go-autocomplete gist ghc flycheck-color-mode-line flycheck-clojure flx-ido f3 exec-path-from-shell ess-smart-equals ess-R-object-popup ess-R-data-view datomic-snippets clojure-snippets clojure-mode-extra-font-locking clojure-cheatsheet cljr-helm cider-eval-sexp-fu auctex ac-math ac-html ac-helm ac-etags ac-emoji ac-clang ac-cider ac-capf ac-c-headers 4clojure 0blayout))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
