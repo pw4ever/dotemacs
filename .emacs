@@ -13,7 +13,7 @@
   '(
     ;; first things first
     "async"
-    "exec-path-from-shell"
+    ;;"exec-path-from-shell"
 
     ;; color themes
     "solarized-theme"
