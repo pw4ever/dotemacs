@@ -23,26 +23,26 @@
 
     ;; auto complete mode
     "auto-complete"
-    "ac-c-headers"
-    "ac-capf"                           ; completion at point
-    "ac-clang"
+    ;"ac-c-headers"
+    ;"ac-capf"                           ; completion at point
+    ;"ac-clang"
     "ac-cider"
-    "ac-emoji"
+    ;"ac-emoji"
     "ac-helm"
-    "ac-math"
+    ;"ac-math"
     ;;"ac-ispell"
-    "ac-etags"
-    "ac-html"
+    ;"ac-etags"
+    ;"ac-html"
 
     ;; company mode
     "company"
     ;;"company-auctex"	; not updated anymore and create startup error.
-    "company-c-headers"
-    "company-flx"
-    "company-ghc"
-    "company-go"
-    "company-math"
-    "company-web"
+    ;"company-c-headers"
+    ;"company-flx"
+    ;"company-ghc"
+    ;"company-go"
+    ;"company-math"
+    ;"company-web"
 
     ;; Evil mode
     "evil"
@@ -58,36 +58,35 @@
     "google-contacts"
 
     ;; Groovy/Gradle
-    "groovy-mode"
-    "groovy-imports"
-    "gradle-mode"
+    ;"groovy-mode"
+    ;"groovy-imports"
+    ;"gradle-mode"
 
     ;; helm
     "helm"
-    "f3"
+    ;"f3"
     "helm-ag"
-    "helm-bibtex"
-    "helm-cider"
-    "helm-cider-history"
+    ;"helm-bibtex"
+    ;"helm-cider"
+    ;"helm-cider-history"
     "helm-company"
     "helm-dired-history"
-    "helm-emmet"
-    "helm-flx"
+    ;"helm-emmet"
+    ;"helm-flx"
     ;;"helm-flyspell"
     ;;"helm-flycheck"
     ;;"helm-fuzzier" ; helm-fuzzier breaks completing-read for, e.g.,  Clojure CIDER's REPL shortcut handler.
-    "helm-fuzzy-find"
-    "helm-go-package"
+    ;"helm-fuzzy-find"
+    ;"helm-go-package"
     "helm-google"
     "helm-gtags"
     "helm-themes"
     "helm-helm-commands"
     "helm-make"
     "helm-package"
-    "helm-themes"
 
     ;; JavaScript
-    "indium"
+    ;"indium"
 
     ;; Magit
     "magit"
@@ -99,15 +98,15 @@
 
     ;; snippets
     "yasnippet"
-    "java-snippets"
-    "clojure-snippets"
-    "datomic-snippets"
-    "go-snippets"
+    ;"java-snippets"
+    ;"clojure-snippets"
+    ;"datomic-snippets"
+    ;"go-snippets"
 
     ;; flycheck
-    "flycheck"
-    "flycheck-color-mode-line"
-    "flycheck-clojure"
+    ;"flycheck"
+    ;"flycheck-color-mode-line"
+    ;"flycheck-clojure"
 
     ;; !!! DO NOT USE the built-in flymake; use flycheck as above
 
@@ -129,18 +128,18 @@
     "4clojure"
 
     ;; Go
-    "go-mode"
-    "go-autocomplete"
-    "go-complete"
-    "go-direx"
-    "go-eldoc"
-    "go-errcheck"
-    "go-playground"
-    "go-scratch"
-    "go-stacktracer"
-    "gorepl-mode"
-    "gotest"
-    "govet"
+    ;"go-mode"
+    ;"go-autocomplete"
+    ;"go-complete"
+    ;"go-direx"
+    ;"go-eldoc"
+    ;"go-errcheck"
+    ;"go-playground"
+    ;"go-scratch"
+    ;"go-stacktracer"
+    ;"gorepl-mode"
+    ;"gotest"
+    ;"govet"
 
     ;; rtags
     "rtags"
@@ -148,17 +147,17 @@
     "ac-rtags"
     "company-rtags"
     "flycheck-rtags"
-    "ivy-rtags"
+    ;"ivy-rtags"
 
     ;; Java
-    "jdee"
+    ;"jdee"
 
     ;; C#
-    "csharp-mode"
-    "omnisharp"
+    ;"csharp-mode"
+    ;"omnisharp"
 
     ;; PowerShell
-    "powershell"
+    ;"powershell"
 
     ;; Haskell
     ;;"haskell-mode"
@@ -209,15 +208,15 @@
     "cpputils-cmake"
 
     ;; Scala
-    "ensime"
-    "flycheck-ensime"
+    ;"ensime"
+    ;"flycheck-ensime"
 
     ;; Kotlin
-    "kotlin-mode"
-    "flycheck-kotlin"
+    ;"kotlin-mode"
+    ;"flycheck-kotlin"
 
     ;; misc
-    "auctex"
+    ;"auctex"
     "cmake-mode"
     "engine-mode"
     "nasm-mode"

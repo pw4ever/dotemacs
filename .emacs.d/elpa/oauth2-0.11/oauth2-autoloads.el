@@ -1,9 +1,12 @@
 ;;; oauth2-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory #$) (car load-path))))
+
 
-;;;### (autoloads nil "oauth2" "oauth2.el" (22518 45588 661735 788000))
+;;;### (autoloads nil "oauth2" "oauth2.el" (0 0 0 0))
 ;;; Generated autoloads from oauth2.el
 
 (autoload 'oauth2-refresh-access "oauth2" "\
@@ -35,11 +38,14 @@ when finished.  See `url-retrieve'.
 
 \(fn TOKEN URL CALLBACK &optional CBARGS REQUEST-METHOD REQUEST-DATA REQUEST-EXTRA-HEADERS)" nil nil)
 
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "oauth2" '("oauth")))
+
 ;;;***
 
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; oauth2-autoloads.el ends here
