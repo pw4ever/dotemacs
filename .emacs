@@ -1,5 +1,7 @@
 ;;(load-file "~/.emacs.d/config/package-emacs23.el") ;; needed for Emacs 23
 
+;(setq debug-on-error t)                 ; uncomment this to show stacktrace on error
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -44,6 +46,9 @@
     ;"company-math"
     ;"company-web"
 
+    ;; Ivy mode
+    "ivy"
+
     ;; Evil mode
     "evil"
     "evil-goggles"
@@ -70,7 +75,7 @@
     ;"helm-cider"
     ;"helm-cider-history"
     "helm-company"
-    "helm-dired-history"
+    ;"helm-dired-history"
     ;"helm-emmet"
     ;"helm-flx"
     ;;"helm-flyspell"
@@ -78,12 +83,12 @@
     ;;"helm-fuzzier" ; helm-fuzzier breaks completing-read for, e.g.,  Clojure CIDER's REPL shortcut handler.
     ;"helm-fuzzy-find"
     ;"helm-go-package"
-    "helm-google"
-    "helm-gtags"
+    ;"helm-google"
+    ;"helm-gtags"
     "helm-themes"
-    "helm-helm-commands"
-    "helm-make"
-    "helm-package"
+    ;"helm-helm-commands"
+    ;"helm-make"
+    ;"helm-package"
 
     ;; JavaScript
     ;"indium"
@@ -120,10 +125,10 @@
     "clj-refactor"
     "cljr-helm"
     "clojure-mode"
-    "clojure-mode-extra-font-locking"
-    "inf-clojure"
-    "clojure-cheatsheet"
-    "slamhound"
+    ;"clojure-mode-extra-font-locking"
+    ;"inf-clojure"
+    ;"clojure-cheatsheet"
+    ;"slamhound"
     ;;"ac-cider"
     "4clojure"
 
@@ -144,10 +149,10 @@
     ;; rtags
     "rtags"
     "helm-rtags"
-    "ac-rtags"
+    ;"ac-rtags"
     "company-rtags"
-    "flycheck-rtags"
-    ;"ivy-rtags"
+    ;"flycheck-rtags"
+    "ivy-rtags"
 
     ;; Java
     ;"jdee"
@@ -185,9 +190,9 @@
 
     ;; ESS/R
     "ess"
-    "ess-R-data-view"
-    "ess-R-object-popup"
-    "ess-smart-equals"
+    ;"ess-R-data-view"
+    ;"ess-R-object-popup"
+    ;"ess-smart-equals"
 
     ;; Markdown
     "markdown-mode"
@@ -248,7 +253,7 @@
     "hideshow-org"
     "popwin"
     "direx"
-    "point-undo"
+    ;"point-undo"
     "eval-sexp-fu"
     "0blayout"
     ))
@@ -267,6 +272,13 @@
     (dolist (f (directory-files dir t "\\.el$"))
       (load-file-if-exists f))))
 
+;; Build package-selected-packages from *package-names*.
+(setq package-selected-packages nil)
+(dolist (package-name *package-names*)
+  (setq package-selected-packages
+        (cons (intern package-name)
+              package-selected-packages)))
+
 ;; Refresh package on startup only if EMACS_REFRESH_PACKAGE environment variable is defined.
 (let ((refreshed-p (if (getenv "EMACS_REFRESH_PACKAGE")
                        nil
@@ -274,12 +286,18 @@
   (dolist (package-name *package-names*)
     (let ((package (intern package-name))
           (package-config-path (format "~/.emacs.d/config/%s.el" package-name)))
+      ;; (unless (package-installed-p package)
+      ;;   (unless refreshed-p
+      ;;     (package-refresh-contents)
+      ;;     (setq refreshed-p t))
+      ;;   (package-install package))
       (ignore-errors
         (unless (package-installed-p package)
           (unless refreshed-p
             (package-refresh-contents)
             (setq refreshed-p t))
           (package-install package)))
+      ;(message "%s" package-config-path) ; debug: for identifying faulting file with `debug-on-error'
       (load-file-if-exists package-config-path))))
 
 (load-file-if-exists "~/.emacs.d/config/post-package-load.el")
@@ -295,22 +313,3 @@
   (when (file-accessible-directory-p dir)
     (dolist (f (directory-files dir t "\\.el$"))
       (load-file-if-exists f))))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ggtags-mode-prefix-key "")
- '(helm-gtags-auto-update nil)
- '(helm-gtags-ignore-case t)
- '(helm-gtags-path-style (quote relative))
- '(package-selected-packages
-   (quote
-    (point-undo ess-R-object-popup slamhound clojure-cheatsheet helm-package zencoding-mode zenburn-theme xahk-mode x86-lookup use-package unify-opening systemtap-mode sr-speedbar solarized-theme runner rainbow-delimiters pretty-mode nasm-mode monokai-theme md4rd markdown-toc magithub lua-mode linum-relative inf-clojure hlinum hideshow-org helm-themes helm-rtags helm-make helm-helm-commands helm-gtags helm-google helm-dired-history helm-company helm-ag hackernews google-translate google-this google-maps google-contacts gnu-elpa-keyring-update gist ggtags flycheck-rtags flx-ido evil-smartparens evil-nerd-commenter evil-magit evil-goggles ess-smart-equals ess-R-data-view engine-mode emmet-mode elfeed-web elfeed-protocol elfeed-org elfeed-goodies direx cpputils-cmake company-rtags cmake-project cmake-ide cmake-font-lock clojure-mode-extra-font-locking cljr-helm cider-eval-sexp-fu ag ac-rtags ac-helm ac-cider 4clojure 0blayout))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
