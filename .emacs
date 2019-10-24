@@ -1,6 +1,6 @@
 ;;(load-file "~/.emacs.d/config/package-emacs23.el") ;; needed for Emacs 23
 
-;(setq debug-on-error t)                 ; uncomment this to show stacktrace on error
+;;(setq debug-on-error t)                 ; uncomment this to show stacktrace on error
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -264,6 +264,13 @@
     (when (file-exists-p file)
       (ignore-errors
         (load-file file)))))
+
+(defun add-to-load-path-if-exists (path)
+  "Prepend path to load-path if it exists."
+  (let ((path (expand-file-name path)))
+    (when (file-accessible-directory-p path)
+      (ignore-errors
+        (add-to-list 'load-path path)))))
 
 (load-file-if-exists "~/.emacs.d/config/pre-package-load.el")
 
