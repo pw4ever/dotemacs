@@ -1,5 +1,4 @@
 ;; https://www.emacswiki.org/emacs/LoadPath#toc2
-(setq debug-on-error t)
 (dolist (path '("~/usr/share/emacs/site-lisp/"))
   (let ((path (expand-file-name path)))
     (when (file-accessible-directory-p path)
