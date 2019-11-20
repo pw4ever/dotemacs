@@ -71,7 +71,6 @@
     (when oldmap
       (set-keymap-parent newmap oldmap))
     (define-key newmap (kbd "u") 'tree-mode-goto-parent)
-    (define-key newmap (kbd "U") 'point-undo)
     (define-key newmap (kbd "o") 'md4rd-open)
     (define-key newmap (kbd "v") 'md4rd-visit)
     (define-key newmap (kbd "e") 'tree-mode-toggle-expand)
