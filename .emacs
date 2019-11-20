@@ -253,7 +253,7 @@
     "hideshow-org"
     "popwin"
     "direx"
-    ;"point-undo"
+    "undo-propose"
     "eval-sexp-fu"
     "0blayout"
     ))
