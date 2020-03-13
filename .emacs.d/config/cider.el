@@ -6,11 +6,8 @@
 ;;; Code:
 (require 'cider)
 
-;; (setenv "PATH" (concat (getenv "PATH") ":/opt/java/bin"))
-;; (setq exec-path (append exec-path '("/opt/java/bin")))
-
-(setenv "PATH" (concat (getenv "PATH") ":~/bin/"))
-(setq exec-path (append exec-path '("~/bin/")))
+;;(setenv "PATH" (concat (getenv "PATH") ":~/bin/"))
+;;(setq exec-path (append exec-path '("~/bin/")))
 
 ;; (custom-set-variables
 ;;  '(cider-server-command "~/tools/bin/lein repl :headless"))
