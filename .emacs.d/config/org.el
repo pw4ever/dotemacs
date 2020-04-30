@@ -59,12 +59,22 @@
 (org-crypt-use-before-save-magic)
 (setq org-crypt-disable-auto-save 'encrypt)
 
+(defun org-insert-epa-file-local-variables ()
+  (interactive)
+  (add-file-local-variable-prop-line 'mode 'org)
+  (add-file-local-variable-prop-line 'epa-file-encrypt-to
+                                     (progn
+                                       (when (not epa-file-encrypt-to)
+                                         (epa-file-select-keys))
+                                       epa-file-encrypt-to)))
+
 (defun org-crypt-enable-keymap ()
   (interactive)
   (define-key org-mode-map (kbd "C-c e") 'org-encrypt-entry)
   (define-key org-mode-map (kbd "C-c E") 'org-encrypt-entries)
   (define-key org-mode-map (kbd "C-c d") 'org-decrypt-entry)
-  (define-key org-mode-map (kbd "C-c D") 'org-decrypt-entries))
+  (define-key org-mode-map (kbd "C-c D") 'org-decrypt-entries)
+  (define-key org-mode-map (kbd "C-c I") 'org-insert-epa-file-local-variables))
 
 (org-crypt-enable-keymap)
 
