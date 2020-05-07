@@ -213,6 +213,8 @@
     "cpputils-cmake"
 
     ;; Scala
+    "scala-mode"
+    "sbt-mode"
     ;"ensime"
     ;"flycheck-ensime"
 
