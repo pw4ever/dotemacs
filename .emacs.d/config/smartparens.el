@@ -4,6 +4,8 @@
 	(hook '(lisp-hook-mode
 			emacs-lisp-mode-hook
 
+            scala-mode-hook
+
 			cider-mode-hook
 			cider-repl-mode-hook
 			clojure-mode-hook
