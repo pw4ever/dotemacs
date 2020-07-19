@@ -16,6 +16,9 @@
     ;; first things first
     "async"
     "gnu-elpa-keyring-update"
+    "nov"
+    "quelpa"
+    "quelpa-use-package"
     ;;"exec-path-from-shell"
 
     ;; color themes
@@ -131,6 +134,7 @@
     ;"slamhound"
     ;;"ac-cider"
     "4clojure"
+    "clojure-essential-ref"
 
     ;; Go
     ;"go-mode"
@@ -322,3 +326,18 @@
   (when (file-accessible-directory-p dir)
     (dolist (f (directory-files dir t "\\.el$"))
       (load-file-if-exists f))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ggtags-mode-prefix-key "")
+ '(package-selected-packages
+   (quote
+    (nov clojure-essential-ref 0blayout eval-sexp-fu undo-propose direx popwin hideshow-org runner use-package unify-opening ggtags sr-speedbar pretty-mode rainbow-delimiters smartparens flx-ido flx linum-relative hlinum ag systemtap-mode lua-mode zencoding-mode xahk-mode emmet-mode hackernews md4rd gist x86-lookup nasm-mode engine-mode cmake-mode sbt-mode scala-mode cpputils-cmake cmake-font-lock cmake-ide cmake-project cmake-mode elfeed-web elfeed-protocol elfeed-org elfeed-goodies elfeed markdown-toc markdown-mode ess ivy-rtags company-rtags helm-rtags rtags 4clojure clojure-mode cljr-helm clj-refactor cider-eval-sexp-fu cider yasnippet org magithub magit helm-themes helm-company helm-ag helm google-contacts google-maps google-translate google-this evil-smartparens evil-nerd-commenter evil-magit evil-goggles evil ivy company ac-helm ac-cider auto-complete zenburn-theme monokai-theme solarized-theme gnu-elpa-keyring-update async))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
