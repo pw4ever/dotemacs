@@ -10,18 +10,12 @@
 ;; 	     '("gnu" . "http://elpa.gnu.org/packages/"))
 
 (add-to-list 'package-archives
-			 '("org" . "http://orgmode.org/elpa/"))
+			 '("org" . "https://orgmode.org/elpa/") t)
 
-
-;; Milkypostman's Emacs Lisp Pakcage Archive (MELPA)
-(add-to-list 'package-archives
-			 '("melpa" . "http://melpa.milkbox.net/packages/"))
-
-(add-to-list 'package-archives
-			 '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
-
-;; (add-to-list 'package-archives
-;;              '("marmalade" . "https://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; (when (boundp 'package-pinned-packages)
 ;;   (setq package-pinned-packages
