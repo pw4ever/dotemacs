@@ -1,0 +1,2 @@
+;;; Generated package description from /home/wei/.emacs.d/elpa/projectile-direnv-20160306.138/projectile-direnv.el  -*- no-byte-compile: t -*-
+(define-package "projectile-direnv" "20160306.138" "Set environment variables from .envrc" '((emacs "24") (s "1.11.0") (dash "2.12.0") (projectile "0.13.0")) :commit "d5d29e5228f840b7a25358a2fd50353ef2dc9b16" :keywords '("convenience") :authors '(("Christian Romney" . "crommney@pointslope.com")) :maintainer '("Christian Romney" . "crommney@pointslope.com") :url "https://github.com/christianromney/projectile-direnv")
