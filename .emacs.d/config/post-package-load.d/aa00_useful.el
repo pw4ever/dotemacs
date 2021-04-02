@@ -1,4 +1,10 @@
 ;;
+;; global-set-key
+;;
+
+(global-set-key (kbd "C-c m") 'man)
+
+;;
 ;; https://stackoverflow.com/a/9414763
 ;;
 (defun copy-file-name-to-clipboard ()
