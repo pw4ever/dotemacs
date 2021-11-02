@@ -84,3 +84,6 @@
 ;; (setq org-crypt-tag-matcher "crypt")
 
 (setq org-crypt-key nil) ; symmetric encryption
+
+;; Markdown (md) backend for org-mode
+(require 'ox-md)
