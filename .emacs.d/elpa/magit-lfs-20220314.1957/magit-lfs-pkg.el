@@ -1,0 +1,2 @@
+;;; Generated package description from magit-lfs.el  -*- no-byte-compile: t -*-
+(define-package "magit-lfs" "20220314.1957" "Magit plugin for Git LFS" '((emacs "24.4") (magit "2.10.3") (dash "2.13.0")) :commit "7bf66a164504bcc9564507312a6e95c839cdac30" :authors '(("Junyoung/Clare Jang" . "jjc9310@gmail.com")) :maintainer '("Junyoung/Clare Jang" . "jjc9310@gmail.com") :keywords '("magit" "git" "lfs" "tools" "vc") :url "https://github.com/ailrun/magit-lfs")
