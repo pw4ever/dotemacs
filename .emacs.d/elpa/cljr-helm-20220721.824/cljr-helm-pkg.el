@@ -1,0 +1,2 @@
+;;; Generated package description from cljr-helm.el  -*- no-byte-compile: t -*-
+(define-package "cljr-helm" "20220721.824" "Wraps clojure refactor commands with helm" '((clj-refactor "0.13.0") (helm-core "3.6.0") (cl-lib "0.5")) :commit "2c1f9cbd892ec03335f671ea3f974ee2ff6078dc" :authors '(("Phil Jackson" . "phil@shellarchive.co.uk")) :maintainer '("Phil Jackson" . "phil@shellarchive.co.uk") :keywords '("helm" "clojure" "refactor") :url "https://github.com/philjackson/cljr-helm")
