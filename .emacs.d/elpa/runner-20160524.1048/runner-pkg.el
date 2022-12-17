@@ -1,0 +1,2 @@
+;;; Generated package description from runner.el  -*- no-byte-compile: t -*-
+(define-package "runner" "20160524.1048" "Improved \"open with\" suggestions for dired" 'nil :commit "a211d57ddc600410d07a8b534920ba905b093d87" :authors '(("Thamer Mahmoud" . "thamer.mahmoud@gmail.com")) :maintainer '("Thamer Mahmoud" . "thamer.mahmoud@gmail.com") :keywords '("shell command" "dired" "file extension" "open with") :url "https://github.com/thamer/runner")
