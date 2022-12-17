@@ -1,5 +1,5 @@
 (require 'helm)
-(require 'helm-config)
+
 
 ;; https://tuhdo.github.io/helm-intro.html
 
@@ -72,8 +72,3 @@
 
 (helm-autoresize-mode +1)
 (helm-mode +1)
-
-
-
-
-
