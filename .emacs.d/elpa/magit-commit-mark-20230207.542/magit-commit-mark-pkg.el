@@ -1,0 +1,2 @@
+;;; Generated package description from magit-commit-mark.el  -*- no-byte-compile: t -*-
+(define-package "magit-commit-mark" "20230207.542" "Support marking commits as read" '((emacs "28.1") (magit "3.3.0")) :commit "9075f9499e653051ca8a86ad17ee704b6171e14f" :authors '(("Campbell Barton" . "ideasman42@gmail.com")) :maintainer '("Campbell Barton" . "ideasman42@gmail.com") :url "https://codeberg.org/ideasman42/emacs-magit-commit-mark")
